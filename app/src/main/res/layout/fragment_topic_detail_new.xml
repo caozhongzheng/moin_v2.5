@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.moinapp.wuliao.ui.CommonTitleBar
+            android:id="@+id/title_layout"
+            style="@style/head_default"
+            app:leftBtnIcon="@drawable/return_key_black"
+            app:titleTxt="话题" />
+
+        <View
+            android:id="@+id/title_down_grey_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/title_down_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/history_bg">
+
+            <!--第一个list的布局-->
+            <FrameLayout
+                android:id="@+id/layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.moinapp.wuliao.ui.empty.EmptyLayout
+                    android:id="@+id/list_error_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="300dp"
+                    android:background="@color/history_bg"
+                    android:visibility="visible" />
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/header"
+                    android:visibility="visible">
+
+                    <ListView
+                        android:id="@+id/listview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@color/transparent"
+                        android:scrollbars="none"
+                        android:scrollingCache="true" />
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+
+            </FrameLayout>
+
+            <!--第二个list的布局-->
+            <FrameLayout
+                android:id="@+id/layout_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.moinapp.wuliao.ui.empty.EmptyLayout
+                    android:id="@+id/list_error_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/topic_detail_emptyview_height"
+                    android:background="@color/history_bg"
+                    android:visibility="visible" />
+
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/header"
+                    android:visibility="visible">
+
+                    <ListView
+                        android:id="@+id/listview2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cacheColorHint="@color/transparent"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:listSelector="@color/transparent"
+                        android:scrollbars="none"
+                        android:scrollingCache="true" />
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+
+            </FrameLayout>
+
+
+            <com.melnykov.fab.FloatingActionButton
+                android:id="@+id/exchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="31dp"
+                android:layout_marginRight="31dp"
+                android:src="@drawable/ac_linemode"
+                android:visibility="gone"
+                app:fab_colorNormal="@color/white"
+                app:fab_colorPressed="@color/white"
+                app:fab_type="normal" />
+
+            <LinearLayout
+                android:id="@+id/ly_topic_join_cosplay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/topic_join_cosplay_height"
+                android:layout_alignParentBottom="true"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <include layout="@layout/split_line_horizontal" />
+
+                <TextView
+                    android:id="@+id/topic_join_cosplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/stick_join"
+                    android:textColor="@color/moin"
+                    android:textSize="@dimen/common_title_size" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.moinapp.wuliao.ui.empty.EmptyLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/history_bg"
+        android:visibility="gone" />
+</FrameLayout>

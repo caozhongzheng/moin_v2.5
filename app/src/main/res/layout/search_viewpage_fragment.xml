@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/title_out_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="@dimen/margin_normal">
+
+            <EditText
+                android:id="@+id/search_et"
+                android:layout_width="wrap_content"
+                android:layout_height="28dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_toLeftOf="@+id/cancel"
+                android:background="@drawable/shape_search_hint_bg"
+                android:imeOptions="actionSearch"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="30dp"
+                android:paddingTop="@dimen/margin_small"
+                android:singleLine="true"
+                android:textColor="@color/common_title_grey"
+                android:textSize="@dimen/txt_size_26px"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/iv_hint_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/search_et"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="129dp"
+                android:src="@drawable/search_small" />
+
+            <TextView
+                android:id="@+id/tv_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/iv_hint_search"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="@string/search"
+                android:textColor="#b7b7b7"
+                android:textSize="@dimen/txt_size_26px" />
+
+            <ImageView
+                android:id="@+id/clear_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignRight="@+id/search_et"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/margin_normal"
+                android:src="@drawable/clear_small"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/cancel"
+                android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="@string/cancle"
+                android:textColor="@color/common_title_grey"
+                android:textSize="@dimen/txt_size_30px" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/all_title_height"
+            android:layout_below="@+id/title_out_frame"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <com.moinapp.wuliao.widget.PagerSlidingTabStrip
+                android:id="@+id/pager_tabstrip"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                app:allowWidthFull="true"
+                app:slidingBlock="@drawable/sliding_block"
+                app:textColor="@color/black" />
+        </LinearLayout>
+        <!--app:slidingBlock="@drawable/image_sliding_grey"-->
+
+        <include layout="@layout/split_line_horizontal" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/title_layout"
+            android:layout_weight="1"
+            android:background="@color/history_bg" />
+
+        <!--<com.moinapp.wuliao.ui.empty.EmptyLayout-->
+        <!--android:id="@+id/error_layout"-->
+        <!--style="@style/fill_fill"-->
+        <!--android:visibility="gone" />-->
+    </LinearLayout>
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <TextView
+        android:id="@+id/tv_invite_friend"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:gravity="center"
+        android:text="邀请好友"
+        android:textColor="@color/moin"
+        android:textSize="@dimen/txt_size_30px" />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="72dp"
+    android:layout_height="30dp"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:orientation="horizontal">
+
+    <View
+        android:id="@+id/view_bg"
+        android:layout_width="60dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:clipChildren="false"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_like_num_on_cosplay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:maxWidth="40dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textSize="11sp" />
+
+        <ImageView
+            android:id="@+id/iv_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/tv_like_num_on_cosplay" />
+
+    </RelativeLayout>
+
+</FrameLayout>

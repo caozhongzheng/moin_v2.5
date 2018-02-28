@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/common_grey">
+
+    <TextView
+        style="@style/common_text_small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_normal"
+        android:text="@string/auto_locate"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/auto_locate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/comment_shape"
+        android:drawableLeft="@drawable/icon_location"
+        android:drawablePadding="@dimen/margin_normal"
+        android:hint="@string/auto_locate"
+        android:padding="@dimen/margin_normal"
+        android:textColor="@color/common_title_grey"
+        android:textSize="@dimen/common_title_size"
+        android:visibility="gone" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hot_city"
+        style="@style/common_text_small"
+        android:padding="@dimen/margin_normal" />
+
+    <ListView
+        android:id="@+id/hotcitylist"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_white"
+        android:cacheColorHint="@color/transparent"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false"
+        android:smoothScrollbar="true"
+        android:visibility="gone">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/hotcity_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+    </LinearLayout>
+</LinearLayout>

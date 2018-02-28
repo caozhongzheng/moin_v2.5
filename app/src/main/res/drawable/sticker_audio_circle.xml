@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:drawable="@drawable/round_voice_10"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/round_voice_7"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/round_voice_6"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/round_voice_5"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/round_voice_4"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/round_voice_3"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/round_voice_2"
+        android:duration="100"/>
+    <item
+        android:drawable="@drawable/round_voice_1"
+        android:duration="100"/>
+</animation-list>

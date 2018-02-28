@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.moinapp.wuliao.ui.CommonTitleBar
+            android:id="@+id/title_bar"
+            style="@style/head_default"
+            app:leftBtnIcon="@drawable/return_key_black"
+            app:titleTxt="@string/setting" />
+
+        <LinearLayout
+            android:id="@+id/ll_security"
+            style="@style/option_item_ll"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_security"
+                style="@style/option_item_rl">
+
+                <TextView
+                    style="@style/option_item_text_parent"
+                    android:text="@string/account_security"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_notification"
+            style="@style/option_item_ll"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/rl_notification_settings"
+                style="@style/option_item_rl">
+
+                <TextView
+                    style="@style/option_item_text_parent"
+                    android:text="@string/mes_notice"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+            </RelativeLayout>
+
+            <View style="@style/h_line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_sticker"
+                style="@style/option_item_rl"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/option_item_text_parent"
+                    android:text="@string/sticker"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout style="@style/option_item_ll">
+            <RelativeLayout
+                android:id="@+id/rl_watermark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/space_8"
+                android:paddingBottom="@dimen/space_8"
+                android:paddingLeft="@dimen/space_13"
+                android:paddingRight="@dimen/space_13">
+
+                <TextView
+                    style="@style/option_item_text_parent"
+                    android:text="@string/watermark"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/text_size_16" />
+
+                <com.moinapp.wuliao.widget.togglebutton.ToggleButton
+                    android:id="@+id/watermark_switch"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+            </RelativeLayout>
+
+            <View style="@style/h_line" />
+        </LinearLayout>
+
+        <LinearLayout style="@style/option_item_ll">
+
+            <RelativeLayout
+                android:id="@+id/rl_message_notification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/space_8"
+                android:paddingBottom="@dimen/space_8"
+                android:paddingLeft="@dimen/space_13"
+                android:paddingRight="@dimen/space_13">
+
+                <TextView
+                    style="@style/option_item_text_parent"
+                    android:text="@string/message_notification"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/text_size_16" />
+
+                <com.moinapp.wuliao.widget.togglebutton.ToggleButton
+                    android:id="@+id/notification_switch"
+                    android:layout_width="48dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <View style="@style/h_line" />
+
+        </LinearLayout>
+
+        <LinearLayout style="@style/option_item_ll">
+            <RelativeLayout
+                android:id="@+id/rl_feedback"
+                style="@style/option_item_rl">
+
+                <TextView
+                    style="@style/option_item_text_parent"
+                    android:text="@string/feedback"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+            </RelativeLayout>
+
+            <View style="@style/h_line" />
+
+            <RelativeLayout
+                android:id="@+id/rl_about"
+                style="@style/option_item_rl"
+                android:visibility="visible">
+
+                <TextView
+                    style="@style/option_item_text_parent"
+                    android:text="@string/about"
+                    android:textColor="?attr/textColor"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rl_exit"
+            style="@style/option_item_ll"
+            android:layout_marginTop="20dp"
+            android:padding="@dimen/margin_bigger">
+
+            <TextView
+                android:id="@+id/setting_logout"
+                style="@style/option_item_text_parent"
+                android:layout_centerHorizontal="true"
+                android:text="@string/exit"
+                android:textColor="@color/moin"
+                android:textSize="@dimen/text_size_16" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

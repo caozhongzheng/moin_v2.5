@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_title_grey"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_bar"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="@string/account_security" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/main_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_bar_height"
+            android:layout_marginTop="@dimen/margin_bigger"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+            <TextView
+                style="@style/common_text_title"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:text="@string/new_password1" />
+
+            <EditText
+                android:id="@+id/password1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:background="@null"
+                android:digits="@string/regist_password_digits"
+                android:hint="@string/retrieve_password_hint"
+                android:maxLength="@integer/password_max_len"
+                android:singleLine="true"
+                android:textColor="@color/common_text_grey"
+                android:textSize="@dimen/common_title_size" />
+
+        </LinearLayout>
+
+
+        <!--password2 edittext-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/common_bar_height"
+            android:layout_marginTop="1dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp">
+
+
+            <TextView
+                style="@style/common_text_title"
+                android:layout_width="82dp"
+                android:layout_height="wrap_content"
+                android:text="@string/new_password2" />
+
+            <EditText
+                android:id="@+id/password2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_normal"
+                android:layout_toRightOf="@+id/register_code_img"
+                android:background="@null"
+                android:digits="@string/regist_password_digits"
+                android:hint="@string/retrieve_password_sure_hint"
+                android:maxLength="@integer/password_max_len"
+                android:singleLine="true"
+                android:textColor="@color/common_text_grey"
+                android:textSize="@dimen/common_title_size" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

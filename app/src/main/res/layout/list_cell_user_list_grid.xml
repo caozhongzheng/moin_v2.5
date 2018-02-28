@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/margin_normal"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal"
+    android:paddingBottom="@dimen/margin_14px"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <include
+        android:id="@+id/user0"
+        style="@style/discovery_item"
+        layout="@layout/list_cell_user_list" />
+
+    <View
+        android:layout_width="@dimen/margin_36px"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/user1"
+        style="@style/discovery_item"
+        layout="@layout/list_cell_user_list" />
+
+    <View
+        android:layout_width="@dimen/margin_36px"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/user2"
+        style="@style/discovery_item"
+        layout="@layout/list_cell_user_list" />
+
+    <View
+        android:layout_width="@dimen/margin_36px"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/user3"
+        style="@style/discovery_item"
+        layout="@layout/list_cell_user_list" />
+
+
+</LinearLayout>

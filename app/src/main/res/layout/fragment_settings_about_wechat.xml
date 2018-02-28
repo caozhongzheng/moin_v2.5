@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/fill_fill"
+    android:background="@color/main_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_common_title_bar" />
+
+    <ImageView
+        android:id="@+id/wechat_qrcode"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="65dp"
+        android:src="@drawable/wechat_2dcode" />
+
+    <LinearLayout
+        android:id="@+id/ll_moin_wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_20"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wechat_acount"
+            android:textColor="?attr/textColor"
+            android:textSize="@dimen/text_size_18" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_wechat"
+            android:textColor="?attr/textColor"
+            android:textSize="@dimen/text_size_18" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/space_15"
+        android:text="@string/wechat_tip"
+        android:textColor="@color/common_text_grey"
+        android:textSize="@dimen/text_size_12" />
+</LinearLayout>

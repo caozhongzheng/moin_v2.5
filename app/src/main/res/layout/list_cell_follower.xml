@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_user_name_letter"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/main_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_normal"
+        android:textColor="@color/common_title_grey"
+        android:textSize="@dimen/common_content_size" />
+    <!--android:visibility="gone" />-->
+
+    <!--android:layout_height="63dp"-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_normal">
+
+        <View
+            android:id="@+id/view_grey_line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignLeft="@+id/ll_name"
+            android:background="@color/main_bg" />
+
+        <FrameLayout
+            android:id="@+id/fl_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginTop="5dp">
+
+            <com.moinapp.wuliao.widget.AvatarView
+                android:id="@+id/avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/widget_dface" />
+
+            <ImageView
+                android:id="@+id/iv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="@dimen/margin_small"
+                android:src="@drawable/girl_red" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:orientation="vertical"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/fl_avatar"
+            android:layout_toLeftOf="@+id/btn_follow"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/user_name"
+                style="@style/common_text_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="用户名" />
+
+            <TextView
+                android:id="@+id/tv_user_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="个性签名"
+                android:textColor="@color/common_text_light"
+                android:textSize="@dimen/common_small_size" />
+
+        </LinearLayout>
+        <!--<Button-->
+        <!--android:id="@+id/btn_follow"-->
+        <!--style="@style/follow_btn_solid"-->
+        <!--android:text="+ 关注"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentRight="true" />-->
+        <com.moinapp.wuliao.widget.FollowView
+            android:id="@+id/btn_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

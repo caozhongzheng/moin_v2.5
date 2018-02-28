@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ll_discovery_header"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <com.moinapp.wuliao.modules.discovery.ui.DiscoveryBannerViewPager
+            android:id="@+id/vp_discovery_banner"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/discovery_banner_bg" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="@dimen/margin_small">
+
+            <LinearLayout
+                android:id="@+id/ll_discovery_banner_point"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_discovery_hot_topic"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:gravity="center_vertical"
+            android:text="@string/hot_topic"
+            android:textColor="@color/common_title_grey"
+            android:textSize="@dimen/common_title_size" />
+
+        <ImageView
+            android:id="@+id/iv_hot_topic_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:paddingLeft="3dp"
+            android:paddingTop="4dp"
+            android:src="@drawable/icon_more_new" />
+    </RelativeLayout>
+
+    <com.moinapp.wuliao.ui.HorizontalListView
+        android:id="@+id/hor_listview"
+        android:layout_width="match_parent"
+        android:layout_height="101dp"
+        android:layout_marginBottom="@dimen/margin_normal" />
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <include layout="@layout/layout_title_down_grey_area" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:padding="@dimen/margin_normal"
+            android:text="热门活动"
+            android:textColor="@color/common_title_grey"
+            android:textSize="@dimen/text_17" />
+
+        <com.keyboard.view.RoundAngleImageView
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:id="@+id/iv_hot_activity1"
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:scaleType="fitXY"
+            app:roundHeight="4dp"
+            app:roundWidth="4dp" />
+
+        <com.keyboard.view.RoundAngleImageView
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:id="@+id/iv_hot_activity2"
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:scaleType="centerInside"
+            app:roundHeight="4dp"
+            app:roundWidth="4dp" />
+
+        <com.keyboard.view.RoundAngleImageView
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_normal"
+            android:id="@+id/iv_hot_activity3"
+            android:layout_width="match_parent"
+            android:layout_height="197dp"
+            android:scaleType="centerInside"
+            app:roundHeight="4dp"
+            app:roundWidth="4dp" />
+    </LinearLayout>
+
+    <include layout="@layout/layout_title_down_grey_area" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_normal"
+        android:text="大家都在看"
+        android:textColor="@color/common_title_grey"
+        android:textSize="@dimen/common_title_size" />
+</LinearLayout>

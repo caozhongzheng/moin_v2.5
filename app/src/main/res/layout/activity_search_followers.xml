@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/common_bar_height"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/tv_left"
+            android:layout_width="32dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="@dimen/margin_normal"
+            android:paddingRight="@dimen/margin_normal">
+
+            <ImageView
+                android:id="@+id/tv_left_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/return_key_black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tv_middle"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/common_text_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="我关注的人" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg"
+        android:padding="@dimen/margin_normal">
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@color/white"
+            android:drawableLeft="@drawable/store_search"
+            android:drawablePadding="@dimen/margin_normal"
+            android:hint="@string/wasai_search_ip_hint"
+            android:maxLength="20"
+            android:padding="@dimen/margin_small"
+            android:singleLine="true"
+            android:textColor="@color/common_title_grey"
+            android:textSize="@dimen/common_title_size"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/clear_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/search_et"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_smaller"
+            android:paddingTop="@dimen/margin_smaller"
+            android:src="@drawable/btn_cancle"
+            android:text="@android:string/cancel"
+            android:textSize="@dimen/text_14"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefreshlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="visible">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:cacheColorHint="@color/transparent"
+            android:listSelector="@color/transparent"
+
+            android:scrollbars="none"
+            android:scrollingCache="true" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.moinapp.wuliao.ui.empty.EmptyLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible" />
+</LinearLayout>

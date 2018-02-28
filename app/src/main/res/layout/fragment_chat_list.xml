@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:rightBtnIcon="@drawable/add_chat"
+        app:titleTxt="聊天" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_normal"
+        android:background="@color/main_bg" />
+
+
+    <LinearLayout
+        android:id="@+id/ly_no_internet"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/chat_list_no_internet"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/warn_chat_big" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chat_no_internet"
+            android:textColor="@color/gray"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_bg"
+            android:divider="@null"></ListView>
+
+        <com.moinapp.wuliao.ui.empty.EmptyLayout
+            android:id="@+id/ly_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"></com.moinapp.wuliao.ui.empty.EmptyLayout>
+    </FrameLayout>
+</LinearLayout>

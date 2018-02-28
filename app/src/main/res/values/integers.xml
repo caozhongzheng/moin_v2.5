@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="photo_release_context_max_length">140</integer>
+    <integer name="tag_max_len">16</integer>
+    <integer name="chat_max_len">140</integer>
+</resources>

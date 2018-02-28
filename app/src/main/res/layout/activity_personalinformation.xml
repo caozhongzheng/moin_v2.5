@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_title_grey"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/titlebar"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleColor="@color/black"
+        app:titleTxt="@string/information_title" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+
+    <com.moinapp.wuliao.ui.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_bg"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/avatar_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="57dp"
+                android:layout_marginTop="@dimen/margin_big">
+
+                <TextView
+                    android:id="@+id/avatar_title"
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/i_avatar" />
+
+                <TextView
+                    android:id="@+id/avatar_title_hint"
+                    style="@style/common_text_title_light_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/avatar_title"
+                    android:layout_toRightOf="@id/avatar_title"
+                    android:text="@string/i_must"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/avatar_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+                <FrameLayout
+                    android:id="@+id/user_avatar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_margin="9dp"
+                    android:layout_toLeftOf="@id/avatar_arrow">
+
+                    <com.moinapp.wuliao.widget.CircleImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="38dp"
+                        android:layout_height="38dp"
+                        android:src="@drawable/icon_avatar" />
+                </FrameLayout>
+            </RelativeLayout>
+
+
+            <View style="@style/divide_line" />
+
+            <RelativeLayout
+                android:id="@+id/contact_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:layout_marginTop="@dimen/margin_big"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/i_contact" />
+
+                <ImageView
+                    android:id="@+id/contact_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+                <TextView
+                    android:id="@+id/contact"
+                    style="@style/userinfo_msg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/contact_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/divide_line" />
+
+            <RelativeLayout
+                android:id="@+id/username_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/username_title"
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/i_nickname" />
+
+                <TextView
+                    android:id="@+id/username_title_hint"
+                    style="@style/common_text_title_light_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/username_title"
+                    android:layout_toRightOf="@id/username_title"
+                    android:text="@string/i_must"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/username_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+                <TextView
+                    android:id="@+id/username"
+                    style="@style/userinfo_msg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/username_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/divide_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/gender_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/gender_title"
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/i_gender" />
+
+                <TextView
+                    android:id="@+id/gender_title_hint"
+                    style="@style/common_text_title_light_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/gender_title"
+                    android:layout_toRightOf="@id/gender_title"
+                    android:text="@string/i_must"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/gender_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+                <TextView
+                    android:id="@+id/gender"
+                    style="@style/userinfo_msg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/gender_arrow" />
+
+                <ImageView
+                    android:id="@+id/gender_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/mine_margin_right"
+                    android:layout_toLeftOf="@id/gender" />
+
+            </RelativeLayout>
+
+            <View style="@style/divide_line" />
+
+            <RelativeLayout
+                android:id="@+id/age_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/i_age" />
+
+                <ImageView
+                    android:id="@+id/age_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+                <TextView
+                    android:id="@+id/age"
+                    style="@style/userinfo_msg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/age_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/divide_line" />
+
+            <RelativeLayout
+                android:id="@+id/zodiac_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/zodiac_title"
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/i_zodiac" />
+
+                <ImageView
+                    android:id="@+id/zodiac_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+                <TextView
+                    android:id="@+id/zodiac"
+                    style="@style/userinfo_msg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/zodiac_arrow" />
+
+            </RelativeLayout>
+
+            <View style="@style/divide_line" />
+
+            <RelativeLayout
+                android:id="@+id/location_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/i_location" />
+
+                <ImageView
+                    android:id="@+id/location_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+                <TextView
+                    android:id="@+id/location"
+                    style="@style/userinfo_msg_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/location_arrow" />
+            </RelativeLayout>
+
+            <View style="@style/divide_line" />
+
+            <LinearLayout
+                android:id="@+id/signature_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/title_height"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/space_16"
+                android:paddingTop="@dimen/space_16">
+
+                <TextView
+                    android:id="@+id/signature_title"
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_signature" />
+
+                <TextView
+                    android:id="@+id/signature"
+                    style="@style/userinfo_msg_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right" />
+
+                <ImageView
+                    android:id="@+id/signature_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/divide_line"
+                android:layout_marginBottom="@dimen/margin_normal" />
+
+            <LinearLayout
+                android:id="@+id/register_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/title_height"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/space_16"
+                android:paddingTop="@dimen/space_16">
+
+                <TextView
+                    android:id="@+id/register_title"
+                    style="@style/common_text_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_register" />
+
+                <TextView
+                    android:id="@+id/register"
+                    style="@style/userinfo_msg_style"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right" />
+
+            </LinearLayout>
+
+            <View
+                style="@style/divide_line"
+                android:layout_marginBottom="@dimen/margin_normal" />
+        </LinearLayout>
+    </com.moinapp.wuliao.ui.BounceScrollView>
+
+</LinearLayout>

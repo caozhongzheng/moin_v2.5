@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="6dp">
+
+        <ImageView
+            android:id="@+id/gpu_image"
+            android:layout_width="162dp"
+            android:layout_height="162dp"
+            android:src="@drawable/default_img" />
+
+        <ImageView
+            android:id="@+id/template_image"
+            android:layout_width="162dp"
+            android:layout_height="162dp" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/template_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textColor="@color/black"
+        style="@style/common_text_title"
+        android:text="名称"
+        android:padding="@dimen/margin_normal"
+        android:gravity="center_horizontal" />
+</LinearLayout>

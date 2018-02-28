@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="推荐文字"
+        app:rightBtnTxt="换一换"/>
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/white"
+        android:divider="@color/title_down_line"
+        android:dividerHeight="1px"></ListView>
+
+</LinearLayout>

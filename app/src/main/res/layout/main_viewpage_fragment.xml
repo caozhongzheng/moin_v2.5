@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/fill_fill">
+
+        <LinearLayout
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/all_title_height"
+            android:background="@color/moin"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/mine_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:onClick="onClick"
+                android:layout_gravity="left"
+                android:gravity="center"
+                android:clickable="true" >
+
+                <com.moinapp.wuliao.widget.AvatarView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="@dimen/space_30"
+                    android:layout_height="@dimen/space_30"
+                    android:layout_centerInParent="true"
+                    android:onClick="onClick"
+                    android:clickable="true"
+                    android:contentDescription="@null" />
+
+                <ImageView
+                    android:id="@+id/iv_left"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/tab_icon_me" />
+
+                <TextView
+                    android:id="@+id/unread_mes"
+                    android:layout_width="@dimen/space_9"
+                    android:layout_height="@dimen/space_9"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/space_10"
+                    android:layout_marginRight="@dimen/space_10"
+                    android:visibility="gone"
+                    android:background="@drawable/message_notification" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"/>
+            <!-- 导航标题栏 -->
+            <com.moinapp.wuliao.widget.PagerSlidingTabStrip
+                android:paddingTop="3dp"
+                android:id="@+id/pager_tabstrip"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.4"
+                android:layout_gravity="center"
+                app:allowWidthFull="true"
+                app:slidingBlock="?attr/sliding_block_bg" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.1"/>
+
+            <RelativeLayout
+                android:id="@+id/search_layout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2"
+                android:layout_gravity="right"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/actionbar_search_icon" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            style="@style/fill_fill"
+            android:layout_below="@id/title_layout" />
+
+        <com.moinapp.wuliao.ui.empty.EmptyLayout
+            android:id="@+id/error_layout"
+            style="@style/fill_fill"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/unread_layout"
+        android:layout_marginTop="@dimen/all_title_height"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/unpop_mes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:gravity="left"
+            android:singleLine="true"
+            android:layout_marginLeft="@dimen/space_10" />
+
+    </LinearLayout>
+
+</FrameLayout>

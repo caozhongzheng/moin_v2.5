@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/fill_fill"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!-- 导航标题栏 -->
+    <com.moinapp.wuliao.widget.PagerSlidingTabStrip
+        android:id="@+id/pager_tabstrip"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_80px"
+        android:layout_centerVertical="true"
+        android:background="@color/history_bg"
+        app:allowWidthFull="true" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_bg" />
+
+    <com.moinapp.wuliao.widget.PreventParentSlideViewPager
+        android:id="@+id/pager"
+        style="@style/fill_fill"
+        android:background="@color/history_bg"/>
+
+</LinearLayout>

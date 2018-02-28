@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/margin_normal"
+    android:layout_marginLeft="@dimen/margin_small"
+    android:layout_marginRight="@dimen/margin_small">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_discovery_item_content_bg"
+        android:orientation="vertical"
+        android:padding="1px">
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/image"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:src="@drawable/default_img"
+            app:roundHeight="4dp"
+            app:roundWidth="4dp" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:ellipsize="end"
+            android:maxLines="3"
+            android:paddingBottom="@dimen/margin_normal"
+            android:paddingLeft="@dimen/margin_normal"
+            android:paddingRight="@dimen/margin_smaller"
+            android:paddingTop="@dimen/margin_normal"
+            android:text=""
+            android:textColor="@color/comment_content"
+            android:textSize="@dimen/comment_text_size" />
+
+    </LinearLayout>
+</LinearLayout>

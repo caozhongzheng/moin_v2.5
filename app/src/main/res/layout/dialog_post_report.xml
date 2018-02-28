@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="162dp"
+        android:orientation="horizontal"
+        android:paddingBottom="37dp"
+        android:paddingTop="37dp">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ly_delete"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/delete_black" />
+
+            <TextView
+                style="@style/dialog_content_invite_text"
+                android:text="@string/delete" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_report"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/whistle_blowing_black" />
+
+            <TextView
+                style="@style/dialog_content_invite_text"
+                android:text="@string/detail_menu_for_report" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_marginLeft="@dimen/space_21"
+        android:layout_marginRight="@dimen/space_21"
+        android:background="@color/hot_pic_num_divider" />
+
+    <LinearLayout
+        android:id="@+id/ly_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+</LinearLayout>

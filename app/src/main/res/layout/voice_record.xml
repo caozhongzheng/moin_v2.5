@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_voice_hint"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/voice_bar_height">
+
+        <TextView
+            android:id="@+id/tv_voice_record_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:text="@string/voice_record_hint"
+            android:textColor="@color/common_text_light"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_voice_recording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:drawableLeft="@drawable/sticker_audio"
+            android:drawablePadding="5dp"
+            android:drawableRight="@drawable/sticker_audio"
+            android:text="0:05"
+            android:textColor="@color/common_text_light"
+            android:textSize="17sp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_voice_record"
+            android:layout_width="99dp"
+            android:layout_height="99dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/holdandtalk" />
+    </RelativeLayout>
+
+</LinearLayout>

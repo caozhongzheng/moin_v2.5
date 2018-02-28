@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="关注" />
+
+    <View
+        android:id="@+id/title_down_grey_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+            <!-- google 官方下拉刷新 -->
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/swiperefreshlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible">
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cacheColorHint="@color/transparent"
+                    android:divider="@color/transparent"
+                    android:listSelector="@color/transparent"
+                    android:scrollbars="none"
+                    android:scrollingCache="true"
+                    app:effect="slide_in"
+                    app:max_velocity="0"
+                    app:only_animate_fling="false"
+                    app:only_animate_new_items="false" />
+
+
+            </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        </FrameLayout>
+
+        <com.moinapp.wuliao.ui.empty.EmptyLayout
+            android:id="@+id/error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/btn_float"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="@dimen/margin_big"
+            android:src="@drawable/post_message_m"
+            app:fab_colorNormal="@color/white"
+            app:fab_colorPressed="@color/white"
+            app:fab_type="normal" />
+    </FrameLayout>
+</LinearLayout>

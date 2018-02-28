@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black" />
+
+    <View
+        android:id="@+id/title_down_grey_line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefreshlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <com.moinapp.wuliao.ui.pla.lib.XMListView
+                android:id="@+id/xmclistview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:cacheColorHint="@color/transparent"
+                android:divider="@color/transparent"
+                android:fadingEdge="none"
+                android:listSelector="@color/transparent"
+                android:paddingTop="10dp"
+                android:scrollbars="none"
+                android:scrollingCache="false"
+                app:cacheColorHint="@color/transparent"
+                app:fadingEdge="none"
+                app:listSelector="@color/transparent"
+                app:plaContentBackground="@color/transparent"
+                app:scrollingCache="false" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <com.moinapp.wuliao.ui.empty.EmptyLayout
+            android:id="@+id/error_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible" />
+
+    </FrameLayout>
+</LinearLayout>

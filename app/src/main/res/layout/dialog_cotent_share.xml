@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="37dp">
+
+        <LinearLayout
+            android:id="@+id/ly_share_weichat"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/wechat_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/platform_weichat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_share_weichat_friends"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/friends_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/platform_weichat_circle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_share_qq"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/qq_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/platform_qq" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_share_qzone"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/qqzone_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/platform_qzone" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="37dp"
+        android:paddingTop="37dp">
+
+        <LinearLayout
+            android:id="@+id/ly_share_sina_weibo"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/microblog_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/platform_sina" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_save"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                android:id="@+id/iv_save"
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/save_black" />
+
+            <TextView
+                android:id="@+id/tv_save"
+                style="@style/dialog_content_share_text"
+                android:text="@string/save" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/ly_delete"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/delete_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/delete" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:id="@+id/ly_report"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/whistle_blowing_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/detail_menu_for_report" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_marginLeft="@dimen/space_21"
+        android:layout_marginRight="@dimen/space_21"
+        android:background="@color/common_grey" />
+
+    <LinearLayout
+        android:id="@+id/ly_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="47dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+</LinearLayout>

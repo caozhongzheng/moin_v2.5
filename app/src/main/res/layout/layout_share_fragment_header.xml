@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/event_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <include layout="@layout/layout_title_down_grey_area" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingLeft="@dimen/margin_normal"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:text="分享活动"
+        android:textColor="@color/common_title_grey"
+        android:textSize="@dimen/common_title_size" />
+
+    <include layout="@layout/list_cell_events_item" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:paddingLeft="@dimen/margin_normal"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:text="分享图片"
+        android:textColor="@color/common_title_grey"
+        android:textSize="@dimen/common_title_size" />
+
+</LinearLayout>

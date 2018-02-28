@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="参与用户" />
+    <!-- google 官方下拉刷新 -->
+    <!--<include layout="@layout/fragment_pull_refresh_listview"/>-->
+    <View
+        android:layout_height="@dimen/margin_normal"
+        android:layout_width="match_parent"
+        android:background="@color/main_bg"/>
+
+    <include layout="@layout/fragment_pull_refresh_listview" />
+</LinearLayout>

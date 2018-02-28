@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_40px"
+    android:paddingRight="@dimen/margin_40px"
+    android:paddingTop="@dimen/margin_40px">
+
+    <ImageView
+        android:id="@+id/zodiac_png"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/zodiac_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:textColor="@color/hot_topic_more"
+        android:textSize="@dimen/txt_size_26px" />
+
+</LinearLayout>

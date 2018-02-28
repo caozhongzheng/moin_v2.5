@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:orientation="horizontal"
+        android:paddingBottom="37dp"
+        android:paddingTop="37dp">
+
+        <LinearLayout
+            android:id="@+id/ly_contacts_invite"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/contacts_black" />
+
+            <TextView
+                style="@style/dialog_content_invite_text"
+                android:text="@string/platform_contacts" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_sina_weibo_invite"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/microblog_black" />
+
+            <TextView
+                style="@style/dialog_content_invite_text"
+                android:text="@string/platform_sina" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_weichat_invite"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/wechat_black" />
+
+            <TextView
+                style="@style/dialog_content_invite_text"
+                android:text="@string/platform_weichat" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ly_qq_invite"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/qq_black" />
+
+            <TextView
+                style="@style/dialog_content_invite_text"
+                android:text="@string/platform_qq" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_marginLeft="@dimen/space_21"
+        android:layout_marginRight="@dimen/space_21"
+        android:background="@color/hot_pic_num_divider" />
+
+    <LinearLayout
+        android:id="@+id/ly_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="42dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/text_size_15" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,15 @@
+<resources>
+
+    <integer name="moin_app_lib_ver">5</integer>
+    <integer name="phone_len">11</integer>
+    <integer name="captcha_len">4</integer>
+    <integer name="password_max_len">16</integer>
+    <integer name="signature_max_lines">2</integer>
+    <integer name="signature_max_len">20</integer>
+    <integer name="username_max_len">10</integer>
+    <integer name="nickname_max_len">16</integer>
+    <!--<integer name="post_photo_max_count">9</integer>-->
+    <integer name="comment_max_len">140</integer>
+    <integer name="bubbletext_max_len">35</integer>
+    <integer name="color_text_max_len">35</integer>
+</resources>

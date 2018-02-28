@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="@color/main_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/margin_small">
+
+        <include
+            android:id="@+id/emoji_list_item0"
+            style="@style/discovery_item"
+            layout="@layout/list_cell_emoji_item" />
+
+        <View
+        android:layout_width="@dimen/margin_small"
+        android:layout_height="match_parent" />
+
+        <include
+            android:id="@+id/emoji_list_item1"
+            style="@style/discovery_item"
+            layout="@layout/list_cell_emoji_item" />
+
+</LinearLayout>

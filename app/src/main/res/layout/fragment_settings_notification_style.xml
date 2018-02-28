@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_bar"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="@string/message_notification" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+
+    <RadioGroup
+        android:id="@+id/notify_style_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_nomal"
+        android:background="@color/white"
+        android:divider="@color/black"
+        android:dividerPadding="15dp"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_smaller"
+        android:paddingLeft="@dimen/margin_normal">
+
+
+        <RelativeLayout
+            android:id="@+id/rl_notify_style_sound"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RadioButton
+                android:id="@+id/notify_style_sound"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:paddingLeft="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/notify_style_sound"
+                android:layout_centerVertical="true"
+                android:text="@string/notify_style_sound"
+                android:textColor="@color/common_title_grey"
+                android:textSize="@dimen/t_18" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/title_down_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_notify_style_vibrate"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RadioButton
+                android:id="@+id/notify_style_vibrate"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:paddingLeft="30dp" />
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/notify_style_vibrate"
+                android:layout_centerVertical="true"
+                android:text="@string/notify_style_vibrate"
+                android:textColor="@color/common_title_grey"
+                android:textSize="@dimen/t_18" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/title_down_line" />
+
+        <RelativeLayout
+            android:id="@+id/rl_notify_style_none"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <RadioButton
+                android:id="@+id/notify_style_none"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:background="@drawable/radio_selector"
+                android:button="@null"
+                android:paddingLeft="30dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/notify_style_none"
+                android:layout_centerVertical="true"
+                android:text="@string/notify_style_none"
+                android:textColor="@color/common_title_grey"
+                android:textSize="@dimen/t_18" />
+
+        </RelativeLayout>
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+</LinearLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--标题栏-->
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:bgColor="@android:color/white"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:rightBtnColor="@color/black"
+        app:rightBtnTxt="@string/cosplay_next"
+        app:titleColor="@android:color/black"
+        app:titleTxt="编辑照片" />
+
+    <jp.co.cyberagent.android.gpuimage.GPUImageView
+        android:id="@+id/gpuimage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="visible"/>
+
+    <!--工具区-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/page_area"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/filter_adjust"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/list_item_background_pressed"
+                android:paddingLeft="@dimen/space_17"
+                android:paddingRight="@dimen/margin_small"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_brightness"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:paddingLeft="@dimen/margin_small"
+                        android:id="@+id/ll_brightness"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/lighteness_gray"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:paddingTop="@dimen/space_4"
+                            android:textSize="13sp"
+                            android:textColor="@color/gray"
+                            android:text="亮度"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical"
+                        android:layout_width="273dp"
+                        android:layout_height="wrap_content">
+
+                        <com.moinapp.wuliao.modules.stickercamera.app.camera.ui.TextMoveLayout
+                            android:id="@+id/textBrLayout"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+                        <SeekBar
+                            android:id="@+id/seek_brightness"
+                            android:layout_alignParentRight="true"
+                            android:max="100"
+                            android:maxHeight="1dp"
+                            android:paddingLeft="@dimen/space_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progressDrawable="@drawable/filter_seebar_progress"
+                            android:thumb="@drawable/filter_seebar_thumb"
+                            android:thumbOffset ="8dp"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_contrast"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/ll_contrast"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/contrast_ratio_black"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:paddingTop="@dimen/space_4"
+                            android:textSize="13sp"
+                            android:textColor="@color/gray"
+                            android:text="对比度"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical"
+                        android:layout_width="273dp"
+                        android:layout_height="wrap_content">
+                        <com.moinapp.wuliao.modules.stickercamera.app.camera.ui.TextMoveLayout
+                            android:id="@+id/textCtLayout"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+                        <SeekBar
+                            android:id="@+id/seek_contrast"
+                            android:layout_alignParentRight="true"
+                            android:max="100"
+                            android:maxHeight="1dp"
+                            android:paddingLeft="@dimen/space_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progressDrawable="@drawable/filter_seebar_progress"
+                            android:thumb="@drawable/filter_seebar_thumb"
+                            android:thumbOffset ="8dp"
+                        />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_saturation"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/ll_saturation"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:src="@drawable/saturation_gray"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:paddingTop="@dimen/space_4"
+                            android:textSize="13sp"
+                            android:textColor="@color/gray"
+                            android:text="饱和度"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_marginTop="2dp"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical"
+                        android:layout_width="273dp"
+                        android:layout_height="wrap_content">
+                        <com.moinapp.wuliao.modules.stickercamera.app.camera.ui.TextMoveLayout
+                            android:id="@+id/textSaLayout"
+                            android:layout_alignParentRight="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp" />
+                        <SeekBar
+                            android:id="@+id/seek_saturation"
+                            android:layout_alignParentRight="true"
+                            android:max="100"
+                            android:maxHeight="1dp"
+                            android:paddingLeft="@dimen/space_8"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:progressDrawable="@drawable/filter_seebar_progress"
+                            android:thumb="@drawable/filter_seebar_thumb"
+                            android:thumbOffset ="8dp"
+                            />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <it.sephiroth.android.library.widget.HListView
+                android:visibility="gone"
+                android:id="@+id/list_filters"
+                style="@style/acitivity_cosplay_edit_hls"
+                android:layout_above="@+id/btm_horizontal_line"
+                app:hlv_dividerWidth="@dimen/margin_15px" />
+
+            <View
+                android:id="@+id/btm_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/title_down_line"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/xview_etv"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_filter"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_bottom_filter"
+                    android:src="@drawable/filter_black"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_bottom_filter"
+                    android:textSize="13sp"
+                    android:textColor="@color/common_title_grey"
+                    android:text="滤镜"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_bottom_adjust"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/iv_bottom_adjust"
+                    android:src="@drawable/effects_gray_dktoolbar"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/tv_bottom_adjust"
+                    android:textSize="13sp"
+                    android:textColor="@color/common_title_grey"
+                    android:text="调整"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

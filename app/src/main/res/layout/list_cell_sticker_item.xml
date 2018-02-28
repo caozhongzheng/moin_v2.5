@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="75dp"
+    android:layout_height="75dp"
+    android:background="@color/history_item_bg">
+
+    <ImageView
+        android:id="@+id/iv_sticker_image"
+        style="@style/fill_fill" />
+
+    <TextView
+        android:id="@+id/tv_use_num"
+        android:layout_width="45dp"
+        android:layout_height="18dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/sticker_use_bg"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="8sp" />
+
+</RelativeLayout>

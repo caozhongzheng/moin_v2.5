@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emoji_title"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/pic_comment_fg_height"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/emoji_title_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/btn_opt_text_to_tools_selector"
+        android:button="@null"
+        android:checked="false"
+        android:contentDescription="@null"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <CheckBox
+        android:id="@+id/emoji_title_menu"
+        android:layout_width="37dp"
+        android:layout_height="47dp"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:button="@drawable/btn_inputchat"
+        android:checked="false"
+        android:contentDescription="表情输入法切换"
+        android:focusable="false"
+        android:visibility="visible" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/emoji_titile_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:background="@null"
+        android:gravity="left|center_vertical"
+        android:hint="@string/chat_input_hint"
+        android:maxLength="@integer/chat_max_len"
+        android:minHeight="35dp"
+        android:textColor="@color/chat_input"
+        android:textColorHint="@color/chat_input_hint"
+        android:textSize="15sp" />
+
+
+    <Button
+        android:id="@+id/emoji_title_send"
+        android:layout_width="48dp"
+        android:layout_height="26dp"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:background="@drawable/send_but_gray_chat"
+        android:text="发送" />
+
+</LinearLayout>

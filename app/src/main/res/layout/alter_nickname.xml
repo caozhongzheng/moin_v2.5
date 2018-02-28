@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_title_grey"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/common_grey"
+        android:layout_marginTop="24dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/common_white">
+
+        <TextView
+            android:id="@+id/alter_nickname_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/header_padding_left"
+            android:onClick="onClick"
+            android:clickable="true"
+            android:text="@android:string/cancel"
+            style="@style/common_text_content" />
+
+        <TextView
+            android:id="@+id/title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/i_nickname"
+            style="@style/common_text_tab" />
+
+        <TextView
+            android:id="@+id/alter_nickname_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:layout_marginRight="@dimen/header_padding_right"
+            android:onClick="onClick"
+            android:clickable="false"
+            android:text="@string/save"
+            style="@style/common_text_content" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/header_padding_left"
+        android:layout_marginRight="@dimen/header_padding_right"
+        android:layout_marginTop="@dimen/margin_bigger">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/comment_shape"
+            android:padding="@dimen/margin_normal">
+
+            <EditText
+                android:id="@+id/alter_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:maxLength="@integer/nickname_max_len"
+                android:singleLine="true"
+                android:editable="true"
+                android:textColor="@color/common_title_grey"
+                android:textSize="@dimen/title_size"
+                android:background="@color/transparent" />
+
+            <ImageView
+                android:id="@+id/clear_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/btn_cancle" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:text="@string/nickname_len_tip"
+            style="@style/common_text_small"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/header_padding_right" />
+
+    </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></View>
+
+</LinearLayout>

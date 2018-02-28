@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/fl_sticker_package"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/ic_sticker_package_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape_sitckpackage_item_fill_bg"
+            android:scaleType="fitStart"
+            app:roundHeight="4dp"
+            app:roundWidth="4dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_sticker_package_name"
+                android:layout_width="match_parent"
+                android:layout_height="17dp"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/shape_sitckpackage_name_fill_bg"
+                android:gravity="center"
+                android:maxLength="6"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="11sp" />
+
+            <ImageView
+                android:id="@+id/iv_sticker_package_category"
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/topic_red" />
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

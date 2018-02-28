@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:background="@color/main_bg"
+        android:id="@+id/ll_hotword_part"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tv_hot_search"
+            android:textColor="#b7b7b7"
+            android:textSize="11sp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:paddingLeft="10dp"
+            android:layout_height="29dp"
+            android:text="@string/hot_search" />
+
+        <LinearLayout
+            android:id="@+id/ll_hot_word"
+            android:background="@color/common_white"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:paddingTop="@dimen/margin_nomal"
+            android:paddingLeft="@dimen/margin_nomal"
+            android:orientation="horizontal">
+
+            <com.moinapp.wuliao.ui.FlowLayout
+                android:id="@+id/fl_hot_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|top">
+
+                <TextView
+                    style="@style/text_search"
+                    android:gravity="center" />
+
+            </com.moinapp.wuliao.ui.FlowLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/title_down_area"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/history_bg" />
+    <!-- google 官方下拉刷新 -->
+    <include layout="@layout/fragment_pull_refresh_listview" />
+</LinearLayout>

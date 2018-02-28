@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:expandableTextView="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topic_detail_header_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/main_bg" />
+
+    <LinearLayout
+        android:id="@+id/tagpop_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small"
+        android:paddingTop="@dimen/margin_small">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/tag_cover"
+                android:layout_width="@dimen/tag_cosplay_width"
+                android:layout_height="@dimen/tag_cosplay_width"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/default_img" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/tag_cosplay_width"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/tag_cover"
+                android:paddingLeft="@dimen/margin_big">
+
+                <TextView
+                    android:id="@+id/tag_name"
+                    style="@style/common_text_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true" />
+
+                <LinearLayout
+                    android:id="@+id/ly_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tag_name"
+                    android:layout_marginTop="@dimen/margin_smaller"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_tag_pictures"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/margin_6px"
+                        android:src="@drawable/icon_pic_topic" />
+
+                    <TextView
+                        android:id="@+id/iv_tag_picnum"
+                        style="@style/common_text_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/iv_tag_like_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_big"
+                        android:layout_marginRight="@dimen/margin_6px"
+                        android:src="@drawable/icon_like_topic" />
+
+                    <TextView
+                        android:id="@+id/tv_tag_like_num"
+                        style="@style/common_text_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <ImageView
+                        android:id="@+id/iv_tag_comment_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_big"
+                        android:layout_marginRight="@dimen/margin_6px"
+                        android:src="@drawable/icon_comment_topic" />
+
+                    <TextView
+                        android:id="@+id/tv_tag_comment_num"
+                        style="@style/common_text_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btn_join"
+                    android:layout_width="96dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="@dimen/margin_bigger"
+                    android:layout_marginBottom="4dp"
+                    android:layout_below="@id/ly_number"
+                    android:background="@drawable/shape_tog_pop_join"
+                    android:drawableLeft="@drawable/icon_tag_pop_join"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:text="我要参与"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_content_size" />
+
+                <TextView
+                    android:id="@+id/btn_like"
+                    android:layout_width="96dp"
+                    android:layout_height="28dp"
+                    android:layout_toRightOf="@id/btn_join"
+                    android:layout_marginTop="@dimen/margin_bigger"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_below="@id/ly_number"
+                    android:background="@drawable/shape_tog_pop_join"
+                    android:drawableLeft="@drawable/icon_tag_pop_join"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:text="我要参与"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/common_content_size" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_introduce"-->
+        <!--style="@style/common_text_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="90dp" />-->
+        <com.moinapp.wuliao.ui.ExpandableTextView
+            android:id="@+id/tv_introduce"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/common_white"
+            android:orientation="vertical"
+            expandableTextView:animAlphaStart="1"
+            expandableTextView:maxCollapsedLines="3">
+
+            <TextView
+                android:id="@id/expandable_text"
+                style="@style/common_text_content_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginTop="8dp"
+                android:lineSpacingMultiplier="1.2" />
+
+            <ImageButton
+                android:id="@id/expand_collapse"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginBottom="@dimen/margin_normal"
+                android:background="@android:color/transparent" />
+
+        </com.moinapp.wuliao.ui.ExpandableTextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="6dp"
+        android:background="@color/main_bg"></View>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_small"
+        android:paddingRight="@dimen/margin_small">
+
+        <!-- 本来是要用FlowLayout来动态添加7个头像, 由于avatarview的new方法出来后有问题
+        暂时用写死7个view的方法来做,以后有时间再研究-->
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_user"-->
+        <!--android:layout_below="@+id/ly_number"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="@dimen/space_5"-->
+        <!--android:orientation="horizontal"-->
+        <!-->-->
+
+        <!--<com.moinapp.wuliao.ui.FlowLayout-->
+        <!--android:id="@+id/fl_user_container"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_vertical">-->
+
+        <!--<com.moinapp.wuliao.widget.AvatarView-->
+        <!--android:id="@+id/avatar"-->
+        <!--android:padding="@dimen/space_2"-->
+        <!--android:src="@drawable/default_img"-->
+        <!--android:layout_height="45dp"-->
+        <!--android:layout_width="45dp" />-->
+
+        <!--</com.moinapp.wuliao.ui.FlowLayout>-->
+        <!--</LinearLayout>-->
+        <include
+            android:id="@+id/avatar0"
+            layout="@layout/single_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_4px" />
+
+        <include
+            android:id="@+id/avatar1"
+            layout="@layout/single_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_4px" />
+
+        <include
+            android:id="@+id/avatar2"
+            layout="@layout/single_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_4px" />
+
+        <include
+            android:id="@+id/avatar3"
+            layout="@layout/single_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_4px" />
+
+        <include
+            android:id="@+id/avatar4"
+            layout="@layout/single_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_4px" />
+
+        <include
+            android:id="@+id/avatar5"
+            layout="@layout/single_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_4px" />
+
+        <include
+            android:id="@+id/avatar6"
+            layout="@layout/single_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_4px" />
+        <TextView
+            style="@style/common_text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/space_2"
+            android:text="9999人参与" />
+
+        <ImageView
+            android:id="@+id/iv_more_user"
+            android:layout_width="34dp"
+            android:layout_height="34dp"
+            android:src="@drawable/return_key_black" />
+    </LinearLayout>
+</LinearLayout>

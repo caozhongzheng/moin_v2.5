@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	
+    <!-- 常用颜色值 -->
+    <color name="white40">#40FFFFFF</color>
+    <color name="white_70">#b3ffffff</color> <!-- secondary text dark -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray2">#808080</color>
+    <color name="red2">#FF0000</color>
+    <color name="gold">#FFD700</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#008000</color>
+    <color name="purple">#800080</color>
+    <color name="pink2">#FFC0CB</color>
+    <color name="orange">#FFA500</color>
+    <color name="lemonyellow">#FFFACD</color>
+    <color name="graywhite">#F5F5F5</color>
+    <color name="grayslate">#708090</color>
+    <color name="lightblue">#0083FF</color>
+
+    <color name="main_green">#40AA53</color>
+    <color name="main_gray">#9A9A9A</color>
+    <color name="main_black">#333</color>
+    <color name="main_purple">#576B95</color>
+    <color name="main_blue">#69bae9</color>
+    <color name="moin">#f66382</color>
+    <color name="moin_dark">#dd5773</color>
+    <color name="main_bg">#F0F3F5</color>
+    <color name="actionbar_background">@color/moin</color>
+    <color name="transparent">#00000000</color>
+    <color name="window_background">#EBEBEB</color>
+
+    <color name="comment_yellow">#FFFFEE</color>
+
+    <color name="link_color">#1d6a2a</color>
+
+    <color name="main_background">#ffebedf0</color>
+    <color name="list_divider_color">#dedede</color>
+    <color name="list_item_background_normal">@color/white</color>
+    <color name="teamlist_item_background_normal">#ffffff</color>
+
+ 	<color name="drawer_menu_item_background_normal">#e2e2e2</color>
+    <color name="drawer_menu_item_background_pressed">#ebeceb</color>
+
+    <color name="actionbar_item_background_normal">@color/transparent</color>
+    <color name="actionbar_item_background_pressed">#0b751e</color>
+
+    <color name="ui_dialog_divider">@color/list_divider_color</color>
+    <color name="ui_dialog_list_text">#5E5E5E</color>
+    <color name="text_dark">#af000000</color>
+    <color name="text_light">#3f000000</color>
+    <color name="light_gray">#1a000000</color>
+    <color name="lightest_gray">#0a000000</color>
+    <color name="bg_touch">@color/lightest_gray</color>
+
+    <color name="main_link_text_color">#ffbedfff</color>
+    <color name="timeline_clickable_text_highlighted_background">#ffbedfff</color>
+
+    <!-- 下拉刷新时，颜色值 -->
+    <color name="swiperefresh_color1">#ff00ddff</color>
+    <color name="swiperefresh_color2">#ffffbb33</color>
+    <color name="swiperefresh_color3">#ffff4444</color>
+    <color name="swiperefresh_color4">#ffaa66cc</color>
+
+    <color name="project_listitem_title">#294fa1</color>
+    <color name="project_listitem_description">#515151</color>
+    <color name="project_listitem_someinfo">#b6b6b6</color>
+
+
+	<color name="project_detail_item">#e2e0e0</color>
+
+	<color name="my_information_option_pressed">#18be40</color>
+
+	<!-- 反馈 -->
+	<color name="text_color_account_info">#ff5e5546</color>
+	<color name="edittext_hint_color">#ffa9a9a9</color>
+
+	<!-- 日历dialog -->
+    <color name="circle_background">#fff2f2f2</color>
+    <color name="line_background">#ffcccccc</color>
+    <color name="done_text_color_normal">#ff333333</color>
+    <color name="search_tag_text_color">#ff666666</color>
+    <color name="done_text_color_disabled">#ffcccccc</color>
+    <color name="blue2">#ff33cc33</color>
+    <color name="darker_blue">#ff00cc99</color>
+    <color name="date_picker_text_normal">#ff999999</color>
+    <color name="calendar_header">#ff999999</color>
+    <color name="date_picker_view_animator">#fff2f2f2</color>
+
+    <color name="ampm_text_color">#8c8c8c</color>
+    <color name="numbers_text_color">#8c8c8c</color>
+
+    <color name="transparent_black">#7F000000</color>
+
+    <color name="spinner_background">#464646</color>
+    <color name="spinner_background_press">#6baf77</color>
+
+    <!--moinv2-->
+    <drawable name="transparent">#00000000</drawable>
+    <color name="common_white">#ffffff</color>
+    <color name="common_black">#000000</color>
+    <color name="common_text_grey">#9fa0a0</color>
+    <color name="common_text_light">#999999</color>
+    <color name="common_text_main">#f66382</color>
+    <color name="comment_author">#999999</color>
+    <color name="comment_text">#333333</color>
+    <color name="comment_content">#666666</color>
+    <color name="comment_time">#b7b7b7</color>
+    <color name="common_tag_bg">#e7e7e7</color>
+    <color name="tab_indicator_text_selected">#ffffff</color>
+    <color name="tab_indicator_text_unselected">#aac5d7</color>
+    <!--<color name="page_viewer_margin_color">#007800</color>-->
+    <color name="text_store_column_title_selected">#11cad2</color>
+    <color name="list_loading_color">#def3f5</color>
+    <color name="push_notification_expanded_seperator_color">#55ffffff</color>
+    <color name="push_notification_expanded_background">#d91199ee</color>
+    <color name="store_tab_text_sel">#a2a6a9</color>
+    <color name="btn_orange">#FF6C04</color>
+    <color name="half_color">#55000000</color>
+    <color name="push_notification_expanded_highlight_color">#55ffffff</color>
+    <color name="md_defaultBackground">#FF555555</color>
+    <color name="default_rim_color">#ffffff</color>
+    <color name="circle_color">#32d636</color>
+    <color name="weixin">#73cb39</color>
+    <color name="qq">#3a97f7</color>
+
+
+    <color name="head_layout_bg_color">#bf0d52</color>
+    <color name="agreement_textColor">#1111aa</color>
+
+    <color name="app_textColor_light">#898989</color>
+    <color name="line_bg">#dddddd</color>
+    <!-- 登录 -->
+    <color name="title_color">#171717</color>
+    <color name="login_head_line_color">#d5d5d5</color>
+    <color name="login_bg">#352f44</color>
+
+    <!-- 个人信息 -->
+    <color name="information_textColor_dark">#171717</color>
+    <color name="information_line_bg">#d8d8d8</color>
+    <color name="information_item_bg_color">#f1f1f1</color>
+
+    <!-- 用户资料 -->
+    <color name="userdata_bg">#ececec</color>
+    <color name="divide_line_color">#dfdfdf</color>
+    <color name="chat_bg">#efe5fe</color>
+    <color name="dialog_btn_bg_progress">#eaeaea</color>
+    <color name="dialog_btn_sure_bg">#e13962</color>
+    <color name="dialog_cancel_bg">#d5d5d5</color>
+    <color name="pink_text">#ff75b3</color>
+
+    <!--底部tab-->
+    <color name="tab_text">#a1a5a8</color>
+    <color name="tab_text_sel">#a2a6a9</color>
+    <color name="common_grey">#f3f3f3</color>
+    <color name="common_sticker_grey">#d7d7d7</color>
+    <color name="common_grey_light">#f5f5f5</color>
+    <color name="common_title_grey">#333333</color>
+    <color name="common_comment_bg">#e4e5e7</color>
+
+    <!--话题详情-->
+    <color name="join_grey">#b7b7b7</color>
+
+    <!--高仿微信表情-->
+    <color name="litte_red">#EF3B4F</color>
+    <color name="base_shallow_black">#818181</color>
+    <color name="text_tab_title_def">@color/base_shallow_black</color>
+    <color name="base_bg_gray">#EBEBEB</color>
+
+    <color name="edit_text">@color/black</color>
+    <color name="edit_hint_text">#ffacacac</color>
+    <color name="register_line_bg">#876876</color>
+    <color name="emoji_pop_bg">#242424</color>
+
+    <!--cosplay-->
+    <color name="photoAlbum">#ff0000</color>
+    <color name="cosplay_background">#3D3741</color>
+    <color name="lock">#f33232</color>
+    <color name="black_overlay">#66000000</color>
+    <color name="search_group_grey">#ababab</color>
+
+<!--stickDemo start-->
+
+    <color name="activity_gray">#b2b2b2</color>
+    <color name="gray">#666666</color>
+    <color name="dialog_title">#ffff0000</color>
+    <color name="common_background">#f5f3f0</color>
+    <color name="txt_color_gray_3">#cbc4c6</color>
+    <color name="pink">#ff5d65</color>
+    <color name="brown">#cccccc</color>
+    <color name="pale_pink">#cbc4c6</color>
+    <color name="divider">#e8e3e3</color>
+    <color name="divider_dark">#c3c4c8</color>
+    <color name="tabcolor">#6e686a</color>
+    <!-- [begin]crop -->
+
+    <color name="crop_bg">#D5D5D5</color>
+
+    <color name="crop__button_bar">#f3f3f3</color>
+    <color name="crop__button_text">#666666</color>
+    <color name="crop__selector_pressed">#1a000000</color>
+    <color name="crop__selector_focused">#77000000</color>
+    <!-- [end]crop -->
+
+    <!--Theme-->
+    <color name="red">#FF6347</color>
+    <color name="dark_red">#F4511E</color>
+    <color name="accent_red">#FF5722</color>
+    <!--Theme-->
+
+    <color name="blue">#2196F3</color>
+    <color name="dark_blue">#1976D2</color>
+    <color name="accent_blue">#448AFF</color>
+
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="light_grey">#ffbebebe</color>
+    <color name="camera_gray">#3d3c3c</color>
+    <color name="camera_bg">#262626</color>
+    <color name="imgfolder_title">#333333</color>
+    <color name="imgfolder_count">#555555</color>
+    <color name="banner_point_drak_gray">#a7a7a7</color>
+    <color name="dialog_btn_bg">#f66382</color>
+    <color name="dialog_line_bg">#dadada</color>
+    <!--stickDemo end-->
+    <color name="user_activity_light_grey">#ffebebee</color>
+    <color name="main_tab_select_bg">#fffcc0cc</color>
+    <color name="hot_topic_more">#999999</color>
+    <color name="topic_message_edging">#ffD0D0D0</color>
+    <color name="title_down_line">#D4D4D4</color><!--b1b2b4-->
+    <color name="history_bg">#F0F3F5</color>
+    <color name="history_item_bg">#CECECE</color>
+    <color name="banner_point_grey">#b8b1ae</color>
+    <color name="sticker_center_tag_uncheck_bg">#f8f8f8</color>
+    <color name="search_hint_bg">#ededed</color>
+    <color name="release_time">#B7B7B7</color>
+    <color name="hot_pic_user_news">#AEAEAE</color>
+    <color name="hot_pic_num_divider">#D4D4D4</color>
+    <color name="invited">#D4D4D4</color>
+    <color name="invite">#f5a623</color>
+    <color name="chat_input_hint">#c7c7c7</color>
+    <color name="chat_input">#333333</color>
+
+    <color name="chat_list_no_internet">#FFDFDF</color>
+    <color name="colortextlist_item_bg">#aaaaaa</color>
+    <color name="colortextlist_item_bg_selected">@color/moin</color>
+    <color name="color_text_style_frame_normal">#999999</color>
+    <color name="color_text_style_bg">#DDDDDD</color>
+    <color name="color_text_style_stroke_normal">#D4D4D4</color>
+    <color name="color_text_style_stroke_selected">#F66382</color>
+
+    <!--彩色字颜色配套的颜色-->
+    <color name="color_text_color_0">#ffffff</color>
+    <color name="color_text_color_1">#333333</color>
+    <color name="color_text_color_2">#e6507b</color>
+    <color name="color_text_color_3">#ea574c</color>
+    <color name="color_text_color_4">#ffa201</color>
+    <color name="color_text_color_5">#35b87f</color>
+    <color name="color_text_color_6">#5bb4da</color>
+
+    <!--彩色字颜色配套的半透明颜色-->
+    <color name="color_text_color_alpha0">#80ffffff</color>
+    <color name="color_text_color_alpha1">#80333333</color>
+    <color name="color_text_color_alpha2">#80e6507b</color>
+    <color name="color_text_color_alpha3">#80ea574c</color>
+    <color name="color_text_color_alpha4">#80ffa201</color>
+    <color name="color_text_color_alpha5">#8035b87f</color>
+    <color name="color_text_color_alpha6">#805bb4da</color>
+
+    <color name="color_choose_photo">#EDEEEE</color>
+    <color name="color_album_text">#404040</color>
+    <color name="go2login_text">#F58099</color>
+
+    <color name="halfTran">#DDffffff</color>
+    <color name="topic_search_highlight">#EF5329</color>
+    <color name="moin_bean_pk_avatar_border">#FFC200</color>
+    <color name="moin_bean_pk_num">#FBE815</color>
+    <color name="moin_bean_pk_earn">#F66483</color>
+</resources>

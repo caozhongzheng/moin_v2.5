@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- 用于调整布局大小-->
+    <LinearLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.keyboard.view.RoundAngleImageView
+                android:id="@+id/item_iv_face"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:minHeight="@dimen/icon_width"
+                android:minWidth="@dimen/icon_width"
+                android:scaleType="fitCenter"
+                android:background="@color/common_sticker_grey"
+                app:roundWidth="4dp"
+                app:roundHeight="4dp"  />
+
+            <ImageView
+                android:id="@+id/item_iv_download"
+                android:layout_width="17dp"
+                android:layout_height="17dp"
+                android:src="@drawable/download_black"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                />
+        </FrameLayout>
+        <TextView
+            android:id="@+id/item_tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:text="name"
+            android:textSize="12sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>

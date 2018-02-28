@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="304dp"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:paddingBottom="15dp"
+    android:paddingLeft="18dp"
+    android:paddingRight="18dp"
+    android:paddingTop="12dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:clickable="true"
+            android:src="@drawable/icon_sticker_detail_close" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:singleLine="true"
+            android:ellipsize="middle"
+            android:paddingLeft="20dp"
+            android:textColor="@color/done_text_color_normal"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="267dp"
+        android:layout_height="267dp">
+
+        <ImageView
+            android:id="@+id/iv_sticker_sample"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@color/main_bg" />
+
+        <ImageView
+            android:id="@+id/iv_icon_poicture"
+            android:layout_width="220dp"
+            android:layout_height="220dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/space_10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_sticker_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="贴纸套装: 秦时明月" />
+
+        <TextView
+            android:id="@+id/tv_sticker_use_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="使用:20" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设计师: " />
+
+        <TextView
+            android:id="@+id/tv_sticker_author"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MOIN" />
+    </LinearLayout>
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:id="@+id/btn_download"
+        style="@style/follow_btn_solid"
+        android:layout_width="94dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:text="使用贴纸" />
+
+</LinearLayout>

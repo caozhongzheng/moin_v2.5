@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal"
+    android:paddingTop="@dimen/margin_normal">
+
+
+    <com.moinapp.wuliao.widget.AvatarView
+        android:id="@+id/message_avatar"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/widget_dface" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_bigger"
+        android:layout_marginLeft="@dimen/margin_bigger"
+        android:layout_marginRight="8dp"
+        android:layout_toLeftOf="@+id/ry_right"
+        android:layout_toRightOf="@+id/message_avatar"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/message_content"
+            style="@style/common_text_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:text="消息内容" />
+
+        <TextView
+            android:id="@+id/message_time"
+            style="@style/common_text_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="刚刚" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ry_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:minHeight="36dp">
+
+        <com.moinapp.wuliao.widget.FollowView
+            android:id="@+id/btn_follow"
+            style="@style/follow_btn"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_add_follow"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_view"
+            style="@style/follow_btn_solid"
+            android:layout_centerInParent="true"
+            android:text="查看"
+            android:visibility="gone" />
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/message_picture"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/welcome_moin"
+            android:visibility="gone"
+            app:roundHeight="7dp"
+            app:roundWidth="7dp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/main_bg" />
+
+</RelativeLayout>

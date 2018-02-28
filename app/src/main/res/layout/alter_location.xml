@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_white"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/alter_location_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:padding="@dimen/margin_normal"
+            android:text="@string/cancle"
+            android:textColor="@color/common_title_grey" />
+
+        <TextView
+            android:id="@+id/alter_location_sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/margin_normal"
+            android:text="@string/sure"
+            android:textColor="@color/common_title_grey" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.moinapp.wuliao.ui.MyNumberPicker
+            android:id="@+id/np_province"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layoutMode="clipBounds"></com.moinapp.wuliao.ui.MyNumberPicker>
+
+        <com.moinapp.wuliao.ui.MyNumberPicker
+            android:id="@+id/np_city"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layoutMode="opticalBounds"></com.moinapp.wuliao.ui.MyNumberPicker>
+    </LinearLayout>
+
+</LinearLayout>

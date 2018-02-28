@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/margin_normal"
+    android:paddingRight="@dimen/margin_normal"
+    android:paddingTop="@dimen/margin_normal">
+
+    <com.moinapp.wuliao.widget.AvatarView
+        android:id="@+id/avatar"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:src="@drawable/widget_dface" />
+
+    <LinearLayout
+        android:id="@+id/container_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/avatar"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/comment_container"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:minHeight="50dp"
+            android:gravity="center_vertical"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/comment_author"
+                style="@style/comment_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="评论内容"
+                android:textIsSelectable="true" />
+
+            <TextView
+                android:paddingTop="@dimen/space_5"
+                android:id="@+id/comment_content_text"
+                style="@style/comment_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textIsSelectable="true" />
+
+            <ImageView
+                android:paddingTop="@dimen/space_17"
+                android:id="@+id/comment_content_image"
+                android:layout_width="68dp"
+                android:layout_height="77dp"
+                android:gravity="center_vertical"
+                android:scaleType="centerInside" />
+
+            <TextView
+                android:paddingTop="@dimen/space_5"
+                android:id="@+id/comment_time"
+                style="@style/comment_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="刚刚" />
+        </LinearLayout>
+
+        <com.moinapp.wuliao.widget.FollowView
+            android:id="@+id/btn_like"
+            style="@style/follow_btn"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="@dimen/space_10"
+            android:visibility="gone" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/iv_handle_comment"
+            android:paddingLeft="@dimen/space_10"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/reply_gray_small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignLeft="@id/container_ly"
+        android:layout_below="@id/container_ly"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:background="@color/main_bg" />
+
+
+</RelativeLayout>

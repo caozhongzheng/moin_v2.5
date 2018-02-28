@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.moinapp.wuliao.ui.NoScrollViewPager
+        android:id="@+id/vp_content_sticker_center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/title_down_line" />
+
+    <RadioGroup
+        android:id="@+id/rg_group_sticker_center"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+
+        <!--android:background="@color/selector_sticker_mall_three_tab_bg"-->
+        <RadioButton
+            android:id="@+id/rb_sticker_mall"
+            style="@style/radio_button"
+            android:drawableTop="@drawable/selector_sticker_mall_pic"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_big"
+            android:text="@string/sticker_mall" />
+
+        <RadioButton
+            android:id="@+id/rb_history"
+            style="@style/radio_button"
+            android:drawableTop="@drawable/selector_my_history_pic"
+            android:paddingTop="@dimen/margin_big"
+            android:text="@string/my_history" />
+
+        <RadioButton
+            android:id="@+id/rb_my_sticker"
+            style="@style/radio_button"
+
+            android:drawableTop="@drawable/selector_my_sticker_pic"
+            android:paddingTop="8dp"
+            android:text="@string/my_sticker" />
+    </RadioGroup>
+</LinearLayout>

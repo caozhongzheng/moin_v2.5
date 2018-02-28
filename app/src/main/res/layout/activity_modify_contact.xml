@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_bg"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="@string/i_contact" />
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_nomal"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!--phone,email edittext-->
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_phone"
+                style="@style/login_hint"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/login_username_hint"
+                android:paddingLeft="@dimen/margin_big"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textColor="@color/common_title_grey"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:id="@+id/clear_username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:onClick="onClick"
+                android:padding="@dimen/margin_normal"
+                android:src="@drawable/clear_small"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <include layout="@layout/split_line_horizontal" />
+
+        <!--captcha edittext-->
+        <LinearLayout
+            android:id="@+id/register_captcha_form"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_big">
+
+            <EditText
+                android:id="@+id/et_code"
+                style="@style/login_hint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_toLeftOf="@+id/get_code_sms"
+                android:layout_weight="3"
+                android:background="@null"
+                android:hint="@string/regist_phone_captcha_hint"
+                android:numeric="integer"
+                android:singleLine="true"
+                android:textColor="@color/common_title_grey" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_big"
+                android:layout_toLeftOf="@id/get_code_sms"
+                android:background="@color/title_down_line" />
+
+            <TextView
+                android:id="@+id/get_code_sms"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1.2"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/regist_get_code"
+                android:textColor="@color/comment_text"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

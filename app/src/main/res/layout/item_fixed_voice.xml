@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="1dp">
+
+    <FrameLayout
+        android:id="@+id/fl_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/voice_border"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/big_border_pink"
+            android:scaleType="fitCenter" />
+
+        <ImageView
+            android:id="@+id/voice_image"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_gravity="center"
+            android:src="@drawable/camera_next"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/voice_name"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="false"
+            android:text="哈!哈!"
+            android:textColor="@color/common_white" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_play"
+        android:visibility="gone"
+        android:layout_marginTop="11.5dp"
+        android:layout_width="67dp"
+        android:layout_height="27dp"
+        android:background="@drawable/preview_border_pink"
+        android:clickable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="试听"
+                android:textColor="@color/moin"
+                android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_playing"
+        android:layout_marginTop="11.5dp"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="27dp"
+            android:layout_height="27dp"
+            android:layout_gravity="center"
+            android:src="@drawable/small_border_pink"
+            />
+
+        <ImageView
+            android:id="@+id/iv_playing"
+            android:layout_width="15dp"
+            android:layout_height="11.3dp"
+            android:layout_gravity="center"
+            android:src="@drawable/sticker_audio"
+            />
+    </FrameLayout>
+</LinearLayout>

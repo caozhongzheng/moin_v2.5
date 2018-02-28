@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/main_bg">
+
+    <include layout="@layout/layout_common_title_bar" />
+
+    <LinearLayout
+        style="@style/option_item_ll"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/space_5"
+            android:paddingBottom="@dimen/space_5">
+
+            <Button
+                android:id="@+id/button_textsize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="字体" />
+
+            <TextView
+                style="@style/option_item_text_parent"
+                android:layout_toRightOf="@id/button_textsize"
+                android:text="测试环境开关"
+                android:textColor="?attr/textColor"
+                android:textSize="@dimen/text_size_16" />
+
+            <com.moinapp.wuliao.widget.togglebutton.ToggleButton
+                android:id="@+id/test_switch"
+                android:layout_width="48dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/iv_env"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_14"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="1dp"
+        android:id="@+id/info"
+        android:background="@color/common_white"
+        android:gravity="start"
+        android:text="12345"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginTop="1dp"
+        android:background="@color/common_white"
+        android:gravity="start"
+        android:text="消息列表"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ListView
+        android:visibility="gone"
+        android:id="@+id/listview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/common_text_grey"
+        android:listSelector="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+
+        android:scrollbars="none"
+        android:scrollingCache="true" />
+    <Button
+        android:id="@+id/test"
+        android:text="清除引导图标记"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</LinearLayout>

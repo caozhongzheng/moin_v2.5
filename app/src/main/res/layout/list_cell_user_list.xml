@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="72dp"
+    android:layout_height="72dp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.widget.AvatarView
+        android:id="@+id/iv_user_list_avatar"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+
+    <TextView
+        android:id="@+id/tv_user_list_name"
+        android:textColor="@color/common_title_grey"
+        android:textSize="@dimen/common_content_size"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:singleLine="true"
+        android:text="MOIN"/>
+
+</LinearLayout>

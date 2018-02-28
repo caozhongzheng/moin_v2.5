@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent">
+
+    <FrameLayout
+        android:id="@+id/fl_topic"
+        android:layout_width="166dp"
+        android:layout_height="166dp"
+        android:orientation="vertical">
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/ic_topic_pic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitStart"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp" />
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="43dp"-->
+        <!--android:layout_marginTop="124dp"-->
+        <!--android:orientation="vertical">-->
+
+        <!--android:background="@drawable/shape_topic_list_text_bg"-->
+        <TextView
+            android:id="@+id/tv_topic_name"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_gravity="bottom"
+            android:background="@drawable/shape_topic_list_text_bg"
+            android:gravity="center"
+            android:text="话题详情"
+            android:textColor="@color/common_title_grey"
+            android:textSize="@dimen/txt_size_30px" />
+        <!--</LinearLayout>-->
+
+        <ImageView
+            android:id="@+id/iv_topic_category"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_gravity="right|bottom"
+            android:layout_marginBottom="52dp"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:scaleType="fitCenter" />
+    </FrameLayout>
+</LinearLayout>

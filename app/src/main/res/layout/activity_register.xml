@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:rightBtnColor="@color/title_down_line"
+        app:rightBtnTxt="@string/sure"
+        app:titleTxt="@string/information_short_title" />
+
+    <include layout="@layout/split_line_horizontal"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_user_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:clickable="true">
+
+        <com.moinapp.wuliao.widget.AvatarView
+            android:id="@+id/iv_avatar"
+            android:layout_width="67dp"
+            android:layout_height="67dp"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/height_90px"
+            android:contentDescription="@null"
+            android:src="@drawable/default_avatar_black"
+            app:border_color="@color/white"
+            app:border_width="2dip" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_avatar"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="点击添加头像"
+            android:textColor="@color/chat_input_hint"
+            android:textSize="@dimen/comment_time_size" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="39dp"
+        android:paddingRight="39dp">
+
+        <!--phone,email edittext-->
+        <RelativeLayout
+            android:id="@+id/register_phone_form"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/i_nickname"
+                android:textColor="@color/comment_content"
+                android:textSize="@dimen/common_title_size" />
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="28dp"
+                android:layout_toRightOf="@+id/nickname"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:hint="@string/regist_username_hint"
+                android:maxLength="@integer/username_max_len"
+                android:singleLine="true"
+                android:textColor="@color/chat_input"
+                android:textColorHint="@color/chat_input_hint"
+                android:textSize="@dimen/common_title_size" />
+
+        </RelativeLayout>
+
+        <include layout="@layout/split_line_horizontal" />
+
+        <RelativeLayout
+            android:id="@+id/gender_item"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:text="@string/i_gender"
+                android:textColor="@color/comment_content"
+                android:textSize="@dimen/common_title_size" />
+
+            <EditText
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="28dp"
+                android:layout_toRightOf="@+id/gender"
+                android:background="@null"
+                android:editable="false"
+                android:gravity="center_vertical"
+                android:hint="请选择性别"
+                android:maxLength="@integer/username_max_len"
+                android:singleLine="true"
+                android:textColor="@color/chat_input"
+                android:textColorHint="@color/chat_input_hint"
+                android:textSize="@dimen/common_title_size" />
+
+            <RadioGroup
+                android:id="@+id/gender_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/gender_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/but_gender_gray"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="男"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/gender_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/but_gender_gray"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="女"
+                    android:textColor="@color/white" />
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <include layout="@layout/split_line_horizontal" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:paddingLeft="@dimen/margin_normal">
+
+    <com.keyboard.view.RoundAngleImageView
+        android:id="@+id/ic_topic_pic"
+        android:layout_width="101dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="22dp"
+        app:roundHeight="4dp"
+        app:roundWidth="4dp" />
+
+    <TextView
+        android:id="@+id/tv_topic_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginTop="22dp"
+        android:layout_toRightOf="@id/ic_topic_pic"
+        android:text=""
+        android:textColor="@color/comment_text"
+        android:textSize="@dimen/common_title_size" />
+
+    <TextView
+        android:id="@+id/tv_topic_category"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_smaller"
+        android:paddingRight="@dimen/margin_smaller"
+        android:text="电影"
+        android:textColor="@color/moin"
+        android:textSize="@dimen/comment_time_size"
+        android:layout_alignTop="@id/tv_topic_name"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="3dp"
+        android:layout_toRightOf="@id/tv_topic_name"
+        android:background="@drawable/tag_border_pink"/>
+
+    <LinearLayout
+        android:id="@+id/ll_num_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_topic_name"
+        android:layout_below="@id/tv_topic_name"
+        android:layout_marginTop="@dimen/margin_normal"
+        android:orientation="horizontal"
+        android:paddingRight="@dimen/margin_normal">
+
+        <TextView
+            android:id="@+id/tv_view_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/small_follow_gray"
+            android:drawablePadding="@dimen/margin_normal"
+            android:text=""
+            android:textColor="@color/comment_time"
+            android:textSize="@dimen/comment_text_size" />
+
+        <TextView
+            android:id="@+id/tv_content_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_bigger"
+            android:drawableLeft="@drawable/small_posts_gray"
+            android:drawablePadding="@dimen/margin_normal"
+            android:text=""
+            android:textColor="@color/comment_time"
+            android:textSize="@dimen/comment_text_size" />
+
+        <TextView
+            android:id="@+id/tv_comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_bigger"
+            android:drawableLeft="@drawable/small_comment_gray"
+            android:drawablePadding="@dimen/margin_normal"
+            android:text=""
+            android:textColor="@color/comment_time"
+            android:textSize="@dimen/comment_text_size" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/tv_topic_name"
+        android:layout_below="@id/ll_num_info"
+        android:layout_marginTop="@dimen/margin_bigger"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:paddingRight="@dimen/margin_normal"
+        android:textColor="@color/comment_content"
+        android:textSize="@dimen/txt_size_30px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_alignLeft="@id/ic_topic_pic"
+        android:layout_below="@id/ic_topic_pic"
+        android:layout_marginTop="22dp"
+        android:background="@color/title_down_line" />
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.moinapp.wuliao.ui.CommonTitleBar
+            android:id="@+id/title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:leftBtnIcon="@drawable/return_key_black"
+            app:rightBtnTxt="继续"
+            app:titleTxt="图片编辑"
+            app:titleColor="@android:color/black"
+            app:bgColor="@color/white"
+            app:rightBtnColor="@color/black"/>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefreshlayout"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@+id/title_layout"
+            android:visibility="visible">
+
+            <ListView
+                android:id="@+id/listview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:listSelector="@color/transparent"
+                android:cacheColorHint="@color/transparent"
+                android:scrollbars="none"
+                android:scrollingCache="true" />
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+<!-- v3.2 取消这个快速入口
+        <com.melnykov.fab.FloatingActionButton
+            android:id="@+id/quick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="31dp"
+            android:src="@drawable/icon_photo_s"
+            app:fab_type="normal"
+            app:fab_colorNormal="@color/moin"
+            app:fab_colorPressed="@color/moin_dark" />
+    -->
+    </RelativeLayout>
+
+    <com.moinapp.wuliao.ui.empty.EmptyLayout
+        android:id="@+id/error_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/swiperefreshlayout"
+        android:visibility="visible" />
+</FrameLayout>

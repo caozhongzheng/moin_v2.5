@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="37dp"
+        android:paddingTop="37dp">
+
+        <LinearLayout
+            android:id="@+id/ly_copy"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/copy_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/copy" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_reply"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/reply_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/ip_reply" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ly_delete"
+            style="@style/dialog_content_share_ll">
+
+            <ImageView
+                style="@style/dialog_content_share_img"
+                android:src="@drawable/delete_black" />
+
+            <TextView
+                style="@style/dialog_content_share_text"
+                android:text="@string/delete" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/space_1"
+        android:layout_marginLeft="@dimen/space_21"
+        android:layout_marginRight="@dimen/space_21"
+        android:background="@color/common_grey" />
+
+    <LinearLayout
+        android:id="@+id/ly_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="47dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="取消"
+            android:textColor="@color/main_gray"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+</LinearLayout>

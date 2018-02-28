@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:background="@color/common_grey">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="@string/select_city" />
+    <!--
+    <include layout="@layout/ic_header" />-->
+    <com.moinapp.wuliao.ui.a2zletter.LetterListView
+        android:id="@+id/citylist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/header_padding_left"
+        android:layout_marginRight="@dimen/header_padding_right"
+        android:background="@color/common_white"
+        android:cacheColorHint="@color/transparent"
+        android:fadingEdge="none"
+        android:listSelector="@color/transparent"
+        android:scrollbarStyle="outsideOverlay"
+        android:scrollingCache="false"
+        android:smoothScrollbar="true">
+
+    </com.moinapp.wuliao.ui.a2zletter.LetterListView>
+</LinearLayout>

@@ -1,0 +1,400 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--
+         Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html
+    -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
+    <dimen name="navigation_drawer_width2">0dp</dimen>
+
+    <!-- OSChina APP -->
+    <dimen name="text_size_32">32.0dip</dimen>
+    <dimen name="text_size_31">31.0dip</dimen>
+    <dimen name="text_size_30">30.0dip</dimen>
+    <dimen name="text_size_29">29.0dip</dimen>
+    <dimen name="text_size_28">28.0dip</dimen>
+    <dimen name="text_size_27">27.0dip</dimen>
+    <dimen name="text_size_26">26.0dip</dimen>
+    <dimen name="text_size_25">25.0dip</dimen>
+    <dimen name="text_size_24">24.0dip</dimen>
+    <dimen name="text_size_23">23.0dip</dimen>
+    <dimen name="text_size_22">22.0dip</dimen>
+    <dimen name="text_size_21">21.0dip</dimen>
+    <dimen name="text_size_20">20.0dip</dimen>
+    <dimen name="text_size_19">19.0dip</dimen>
+    <dimen name="text_size_18">18.0dip</dimen>
+    <dimen name="text_size_17">17.0dip</dimen>
+    <dimen name="text_size_16">16.0dip</dimen>
+    <dimen name="text_size_15">15.0dip</dimen>
+    <dimen name="text_size_14">14.0dip</dimen>
+    <dimen name="text_size_13">13.0dip</dimen>
+    <dimen name="text_size_12">12.0dip</dimen>
+    <dimen name="text_size_11">11.0dip</dimen>
+    <dimen name="text_size_10">10.0dip</dimen>
+    <dimen name="text_size_9">9.0dip</dimen>
+    <dimen name="text_size_8">8.0dip</dimen>
+    <dimen name="text_size_7">7.0dip</dimen>
+    <dimen name="space_100">100.0dip</dimen>
+    <dimen name="space_60">60dp</dimen>
+    <dimen name="space_49">49dip</dimen>
+    <dimen name="space_40">40dip</dimen>
+    <dimen name="space_35">35.0dip</dimen>
+    <dimen name="space_30">30.0dip</dimen>
+    <dimen name="space_29">29.0dip</dimen>
+    <dimen name="space_28">28.0dip</dimen>
+    <dimen name="space_27">27.0dip</dimen>
+    <dimen name="space_26">26.0dip</dimen>
+    <dimen name="space_25">25.0dip</dimen>
+    <dimen name="space_24">24.0dip</dimen>
+    <dimen name="space_23">23.0dip</dimen>
+    <dimen name="space_22">22.0dip</dimen>
+    <dimen name="space_21">21.0dip</dimen>
+    <dimen name="space_20">20.0dip</dimen>
+    <dimen name="space_19">19.0dip</dimen>
+    <dimen name="space_18">18.0dip</dimen>
+    <dimen name="space_17">17.0dip</dimen>
+    <dimen name="space_16">16.0dip</dimen>
+    <dimen name="space_15">15.0dip</dimen>
+    <dimen name="space_14">14.0dip</dimen>
+    <dimen name="space_13">13.0dip</dimen>
+    <dimen name="space_12">12.0dip</dimen>
+    <dimen name="space_11">11.0dip</dimen>
+    <dimen name="space_10">10.0dip</dimen>
+    <dimen name="space_9">9.0dip</dimen>
+    <dimen name="space_8">8.0dip</dimen>
+    <dimen name="space_7">7.0dip</dimen>
+    <dimen name="space_6">6.0dip</dimen>
+    <dimen name="space_5">5.0dip</dimen>
+    <dimen name="space_4">4.0dip</dimen>
+    <dimen name="space_3">3.0dip</dimen>
+    <dimen name="space_2">2.0dip</dimen>
+    <dimen name="space_1">1.0dip</dimen>
+    
+    <dimen name="dialog_margin">7.0dip</dimen>
+    <dimen name="global_padding">8.0dip</dimen>
+    <dimen name="global_dialog_padding">15.0dip</dimen>
+   	<dimen name="text_regular_primary_size">14.0dip</dimen>
+    <dimen name="text_large_secondary_size">12.0dip</dimen>
+    <dimen name="text_large_primary_size">16.0dip</dimen>
+    
+    <dimen name="popo_menu_dialog_width">150dip</dimen>
+
+    <dimen name="tweet_item_margin">8dp</dimen>
+    <dimen name="tweet_item_border_width">1dp</dimen>
+    <dimen name="tweet_item_corner_radius">3dp</dimen>
+    <dimen name="tweet_item_padding_top_bottom">20dp</dimen>
+    <dimen name="tweet_item_padding_left_right">15dp</dimen>
+    <dimen name="tweet_item_profile_info_padd">10dp</dimen>
+    <dimen name="tweet_linkview_left">25dp</dimen>
+    
+    <dimen name="timeline_small_card_icon_width">12.0dip</dimen>
+    <dimen name="timeline_small_card_icon_height">12.0dip</dimen>
+    <dimen name="timeline_small_card_icon_margin_left">5.0dip</dimen>
+    <dimen name="timeline_small_card_triangle_margin_left">5.0dip</dimen>
+    <dimen name="timeline_small_card_triangle_margin_right">4.0dip</dimen>
+    <dimen name="timeline_small_card_title_margin_left">5.0dip</dimen>
+    <dimen name="timeline_small_card_title_text_size">12.0sp</dimen>
+    
+    <dimen name="timeline_small_card_height">20.0dip</dimen>
+    <dimen name="timeline_small_card_min_width">66.0dip</dimen>
+    <dimen name="timeline_small_card_padding_right">5.0dip</dimen>
+    
+    <dimen name="ldrawer_drawableSize">50dp</dimen>
+    <dimen name="ldrawer_barSize">18dp</dimen>
+    <dimen name="ldrawer_topBottomBarArrowSize">11dp</dimen>
+    <dimen name="ldrawer_thickness">2dp</dimen>
+    <dimen name="ldrawer_gapBetweenBars">3dp</dimen>
+    <dimen name="ldrawer_middleBarArrowSize">16dp</dimen>
+    
+    <!-- 意见反馈 -->
+    <dimen name="text_size_account_info">18.0sp</dimen>
+    
+    <!-- 时间选择dialog -->
+    <dimen name="done_label_size">14sp</dimen>
+    <dimen name="date_picker_component_width">270dip</dimen>
+    <dimen name="date_picker_header_height">30dip</dimen>
+    <dimen name="selected_calendar_layout_height">155dip</dimen>
+    <dimen name="date_picker_view_animator_height">270dip</dimen>
+    <dimen name="month_list_item_header_height">50dip</dimen>
+    <dimen name="month_day_label_text_size">10sp</dimen>
+    <dimen name="day_number_select_circle_radius">16dip</dimen>
+    <dimen name="month_select_circle_radius">45dip</dimen>
+    <dimen name="selected_date_year_size">30dip</dimen>
+    <dimen name="selected_date_day_size">75dip</dimen>
+    <dimen name="selected_date_month_size">30dip</dimen>
+    <dimen name="date_picker_header_text_size">14dip</dimen>
+    <dimen name="month_label_size">16sp</dimen>
+    <dimen name="day_number_size">16sp</dimen>
+    <dimen name="year_label_height">64dip</dimen>
+    <dimen name="year_label_text_size">22dip</dimen>
+
+    <dimen name="time_label_size">60sp</dimen>
+    <dimen name="extra_time_label_margin">-30dp</dimen>
+    <dimen name="ampm_label_size">16sp</dimen>
+    <dimen name="ampm_left_padding">6dip</dimen>
+    <dimen name="separator_padding">4dip</dimen>
+    <dimen name="header_height">96dip</dimen>
+    <dimen name="picker_dimen">270dip</dimen>
+    <dimen name="minimum_margin_sides">48dip</dimen>
+    <dimen name="minimum_margin_top_bottom">24dip</dimen>
+
+    <item name="circle_radius_multiplier" format="float" type="string">0.82</item>
+    <item name="circle_radius_multiplier_24HourMode" format="float" type="string">0.85</item>
+    <item name="selection_radius_multiplier" format="float" type="string">0.16</item>
+    <item name="ampm_circle_radius_multiplier" format="float" type="string">0.19</item>
+    <item name="numbers_radius_multiplier_normal" format="float" type="string">0.81</item>
+    <item name="numbers_radius_multiplier_inner" format="float" type="string">0.60</item>
+    <item name="numbers_radius_multiplier_outer" format="float" type="string">0.83</item>
+    <item name="text_size_multiplier_normal" format="float" type="string">0.17</item>
+    <item name="text_size_multiplier_inner" format="float" type="string">0.14</item>
+    <item name="text_size_multiplier_outer" format="float" type="string">0.11</item>
+
+    <!--moinv2-->
+    <!-- For buttons -->
+    <!-- For list texts (top line) -->
+    <!-- For list texts (bottom line), summary texts, icon texts, descriptions, tag texts -->
+    <dimen name="theme_viewpager_item_height">341.5dp</dimen>
+
+    <dimen name="t_18">18sp</dimen>
+    <dimen name="t_20">20sp</dimen>
+
+    <dimen name="margin_small">6dp</dimen>
+    <dimen name="margin_normal">10dp</dimen>
+    <dimen name="margin_big">12dp</dimen>
+    <dimen name="margin_bigger">15dp</dimen>
+    <dimen name="minus_margin_normal">-10dp</dimen>
+
+    <!-- pop -->
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="title_size">18sp</dimen>
+    <dimen name="title_height">48dp</dimen>
+    <dimen name="padding_vertical">10dp</dimen>
+
+    <!-- 登录 -->
+    <dimen name="login_edittext_margin_horizontal">15dp</dimen>
+    <dimen name="login_edittext_margin_top_bottom">22dp</dimen>
+    <!-- 评论列表 -->
+    <dimen name="comment_avatar">48dp</dimen>
+    <!-- 个人信息 -->
+    <dimen name="arrow_padding">6dp</dimen>
+    <dimen name="dialog_title_height">38dp</dimen>
+    <dimen name="dialog_width">300dp</dimen>
+    <dimen name="dialog_height">180dp</dimen>
+    <!--iplist hot banner-->
+    <!--这个高度是片花剧照页第一个片花的高度，此处和ip首页中banner的高度设为一样的了-->
+    <dimen name="ip_hot_banner_height">312dp</dimen>
+    <!--这个高度是ip详情页顶部电影IP名称距离顶部的高度-->
+    <dimen name="ip_ipdetail_height">222dp</dimen>
+    <dimen name="header_padding_left">8dp</dimen>
+    <dimen name="header_padding_right">8dp</dimen>
+    <dimen name="ip_homepg_row_w">110dp</dimen>
+    <dimen name="ip_homepg_row_h">156dp</dimen>
+    <dimen name="ip_homepg_row_divider_w">2dp</dimen>
+    <!--ip详情页中收藏和分享操作栏的高度-->
+    <dimen name="option_h">30dp</dimen>
+
+    <dimen name="clip_item_hmax">140dp</dimen>
+    <dimen name="clip_item_hmin">100dp</dimen>
+    <dimen name="title_text_right_padding">10dp</dimen>
+    <dimen name="title_item_left_padding">10dp</dimen>
+    <dimen name="login_image_top">40dp</dimen>
+    <dimen name="login_image_bottom">80dp</dimen>
+    <!--这个高度是ip详情页表情tab的表情grid的高度，计算方法是屏幕宽度360dp*(2/3两行)+10dp水平horizontalSpaceing-->
+    <dimen name="ipdetail_emj_grid_h">250dp</dimen>
+    <dimen name="common_small_size">12sp</dimen>
+    <dimen name="common_content_small_size">10.5sp</dimen>
+    <dimen name="common_content_size">14sp</dimen>
+    <dimen name="common_title_size">16sp</dimen>
+    <dimen name="common_tab_title_size">18sp</dimen>
+    <dimen name="comment_text_size">13sp</dimen>
+    <dimen name="comment_time_size">11sp</dimen>
+    <dimen name="abc_text_size_smaller_comment">12sp</dimen>
+
+    <!--选择图片中下方操作栏的高度-->
+    <dimen name="photo_toobar_h">53dp</dimen>
+    <dimen name="photo_add_w">90dp</dimen>
+    <dimen name="photo_add_h">120dp</dimen>
+
+
+    <!--高仿微信表情-->
+    <dimen name="dimension_50">50dp</dimen>
+
+    <dimen name="common_bar_height">@dimen/dimension_50</dimen>
+
+    <dimen name="margin_nomal">10dp</dimen>
+    <dimen name="margin_middle">15dp</dimen>
+
+    <dimen name="text_14">14sp</dimen>
+    <dimen name="text_17">17sp</dimen>
+    <dimen name="text_20">20sp</dimen>
+
+    <dimen name="text_nomal">@dimen/text_14</dimen>
+    <dimen name="text_big">@dimen/text_17</dimen>
+    <dimen name="margin_smaller">4dp</dimen>
+    <dimen name="ip_details_smallest">11sp</dimen>
+    <dimen name="mine_margin_left">5dp</dimen>
+    <dimen name="mine_margin_right">5dp</dimen>
+
+    <dimen name="favoriate_ip_toobar_h">50dp</dimen>
+    <dimen name="mypost_header_margin">60dp</dimen>
+    <dimen name="list_item_height">25dp</dimen>
+
+    <!--cosplay-->
+    <dimen name="cosplay_type_cell_space">20dp</dimen>
+
+    <dimen name="cosplay_type_cell_width">80dp</dimen>
+    <dimen name="cosplay_type_cell_height">110dp</dimen>
+
+    <dimen name="cosplay_item_cell_width">68dp</dimen>
+    <dimen name="cosplay_item_cell_height">68dp</dimen>
+
+    <dimen name="common_btn_height">36dp</dimen>
+    <dimen name="emj_min_width">300dp</dimen>
+    <dimen name="cosplaysharecolorspace">12dp</dimen>
+    <dimen name="common_divider_height">25dp</dimen>
+    <dimen name="common_btn_width">60dp</dimen>
+    <!--窝窝帖子页title的左右margin-->
+    <dimen name="wowo_post_margin_left">18dp</dimen>
+    <dimen name="wowo_post_margin_right">27dp</dimen>
+    <!--窝窝发帖回复时，分享时表情展示的大小-->
+    <dimen name="emj_dialog_width">300dp</dimen>
+    <dimen name="emj_dialog_height">300dp</dimen>
+    <dimen name="ip_wowo_view_h">350dp</dimen>
+
+<!-- stickDemo start -->
+    <!-- 各种高度 -->
+    <dimen name="height_625px">313dp</dimen>
+    <dimen name="height_414px">207dp</dimen>
+    <dimen name="height_350px">175dp</dimen>
+    <dimen name="height_300px">150dp</dimen>
+    <dimen name="height_280px">140dp</dimen>
+    <dimen name="height_244px">122dp</dimen>
+    <dimen name="height_220px">110dp</dimen>
+    <dimen name="height_200px">100dp</dimen>
+    <dimen name="height_180px">90dp</dimen>
+    <dimen name="height_160px">80dp</dimen>
+    <dimen name="height_154px">77dp</dimen>
+    <dimen name="height_150px">75dp</dimen>
+    <dimen name="height_140px">70dp</dimen>
+    <dimen name="height_130px">65dp</dimen>
+    <dimen name="height_120px">60dp</dimen>
+    <dimen name="height_115px">58dp</dimen>
+    <dimen name="height_110px">55dp</dimen>
+    <dimen name="height_100px">50dp</dimen>
+    <dimen name="height_90px">45dp</dimen>
+    <dimen name="height_80px">40dp</dimen>
+    <dimen name="height_75px">38dp</dimen>
+    <dimen name="height_70px">35dp</dimen>
+    <dimen name="height_68px">34dp</dimen>
+    <dimen name="height_60px">30dp</dimen>
+    <dimen name="height_50px">25dp</dimen>
+    <dimen name="height_52px">26dp</dimen>
+    <dimen name="height_42px">21dp</dimen>
+    <dimen name="height_40px">20dp</dimen>
+    <dimen name="height_32px">16dp</dimen>
+    <dimen name="height_28px">14dp</dimen>
+    <dimen name="height_26px">13dp</dimen>
+    <dimen name="height_24px">12dp</dimen>
+    <dimen name="height_20px">10dp</dimen>
+    <dimen name="height_16px">8dp</dimen>
+    <dimen name="height_8px">4dp</dimen>
+
+    <dimen name="margin_94px">47dp</dimen>
+    <dimen name="margin_88px">44dp</dimen>
+    <dimen name="margin_80px">40dp</dimen>
+    <dimen name="margin_50px">25dp</dimen>
+    <dimen name="margin_46px">23dp</dimen>
+    <dimen name="margin_40px">20dp</dimen>
+    <dimen name="margin_36px">18dp</dimen>
+    <dimen name="margin_32px">16dp</dimen>
+    <dimen name="margin_30px">15dp</dimen>
+    <dimen name="margin_26px">13dp</dimen>
+    <dimen name="margin_25px">13dp</dimen>
+    <dimen name="margin_20px">10dp</dimen>
+    <dimen name="margin_18px">9dp</dimen>
+    <dimen name="margin_16px">8dp</dimen>
+    <dimen name="margin_15px">8dp</dimen>
+    <dimen name="margin_14px">7dp</dimen>
+    <dimen name="margin_12px">6dp</dimen>
+    <dimen name="margin_10px">5dp</dimen>
+    <dimen name="margin_6px">3dp</dimen>
+    <dimen name="margin_4px">2dp</dimen>
+    <dimen name="margin_minus_6px">-3dp</dimen>
+
+    <dimen name="txt_size_130px">65sp</dimen>
+    <dimen name="txt_size_80px">40sp</dimen>
+    <dimen name="txt_size_70px">35sp</dimen>
+    <dimen name="txt_size_60px">30sp</dimen>
+    <dimen name="txt_size_40px">20sp</dimen>
+    <dimen name="txt_size_36px">18sp</dimen>
+    <dimen name="txt_size_34px">17sp</dimen>
+    <dimen name="txt_size_32px">16sp</dimen>
+    <dimen name="txt_size_30px">15sp</dimen>
+    <dimen name="txt_size_28px">14sp</dimen>
+    <dimen name="txt_size_26px">13sp</dimen>
+    <dimen name="txt_size_24px">12sp</dimen>
+    <dimen name="txt_size_22px">11sp</dimen>
+    <dimen name="txt_size_16px">8sp</dimen>
+    <dimen name="txt_size_18px">9sp</dimen>
+
+    <dimen name="img_single_size">288dp</dimen>
+    <dimen name="img_tri_small_size">144dp</dimen>
+
+    <dimen name="dis_0">0dp</dimen>
+    <dimen name="dis_1">1dp</dimen>
+    <!-- 各种高度 -->
+
+    <dimen name="crop__bar_height">48dp</dimen>
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+
+    <!-- camera -->
+    <dimen name="wp_sample_corner">6dp</dimen>
+    <dimen name="camera_top_h">40dp</dimen>
+    <!-- stickDemo end -->
+
+    <!-- SeriesGuide start -->
+    <dimen name="fab_margin">4dp</dimen>
+
+    <!-- Text -->
+    <dimen name="text_size_default_sg">14sp</dimen>
+    <dimen name="text_size_caption_sg">12sp</dimen>
+    <dimen name="user_space_view_height">47dp</dimen>
+
+    <!-- SeriesGuide end -->
+
+    <dimen name="activity_cosplay_width">262dp</dimen>
+    <dimen name="moin_watermark_width">67dp</dimen>
+    <dimen name="moin_watermark_height">22.3dp</dimen>
+    <dimen name="moin_watermark_margin">13.3dp</dimen>
+    <dimen name="jump_margin">23.3dp</dimen>
+    <dimen name="tag_cosplay_width">140dp</dimen>
+    <dimen name="topic_cosplay_width_new">87dp</dimen>
+    <dimen name="user_activity_emptyview_height">265dp</dimen>
+    <dimen name="all_title_height">42dp</dimen>
+    <dimen name="cosplay_innertitle_margin">16dp</dimen>
+    <dimen name="dc_cos_item_avatar_height">45dp</dimen>
+    <dimen name="margin_join_user">5.3dp</dimen>
+    <dimen name="topic_detail_emptyview_height">280dp</dimen>
+    <dimen name="topic_join_cosplay_height">45dp</dimen>
+    <dimen name="invite_avatar">38dp</dimen>
+    <dimen name="invite_line_marginLeft">58dp</dimen>
+    <dimen name="iv_addfollow_right_margin">3.3dp</dimen>
+    <dimen name="chat_image_width">68dp</dimen>
+    <dimen name="chat_image_padding">17dp</dimen>
+    <dimen name="color_text_color_item_bg_width">23dp</dimen>
+    <dimen name="color_text_color_item_fg_width">17dp</dimen>
+    <dimen name="color_text_style_item_fg_width">47dp</dimen>
+    <dimen name="pic_comment_fg_height">47dp</dimen>
+    <dimen name="voice_bar_height">225dp</dimen>
+
+    <dimen name="mission_byn_width">89dp</dimen>
+    <dimen name="comment_mark_margintop">214dp</dimen>
+</resources>

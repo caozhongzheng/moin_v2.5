@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/margin_normal">
+
+        <RelativeLayout
+            android:id="@+id/rl_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <FrameLayout
+                android:id="@+id/fl_ava_gen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.moinapp.wuliao.widget.AvatarView
+                    android:id="@+id/iv_avatar"
+                    android:layout_width="27dp"
+                    android:layout_height="27dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:src="@drawable/default_img" />
+
+                <ImageView
+                    android:id="@+id/iv_sex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_name"
+                    android:layout_gravity="bottom|right"
+                    android:layout_marginLeft="@dimen/space_5"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_marginTop="@dimen/space_2"
+                    android:layout_toRightOf="@+id/tv_name"
+                    android:src="@drawable/female_red" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_name"
+                style="@style/common_text_content_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/fl_ava_gen"
+                android:singleLine="true"
+                android:text="MOIN" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_toRightOf="@id/fl_ava_gen"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/small_picture_gray" />
+
+                <TextView
+                    android:id="@+id/tv_pic_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:textColor="@color/release_time"
+                    android:textSize="@dimen/comment_time_size" />
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:background="@drawable/small_like_gray" />
+
+                <TextView
+                    android:id="@+id/tv_like_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7dp"
+                    android:textColor="@color/release_time"
+                    android:textSize="@dimen/comment_time_size" />
+            </LinearLayout>
+
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_signature"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toRightOf="@id/iv_avatar"-->
+            <!--android:layout_alignBottom="@+id/iv_avatar"-->
+            <!--android:singleLine="true"-->
+            <!--android:maxWidth="200dp"-->
+            <!--android:text="刚刚"-->
+            <!--android:paddingTop="@dimen/space_2"-->
+            <!-- -->
+            <!--android:layout_below="@+id/tv_name" />-->
+
+        </RelativeLayout>
+
+        <com.moinapp.wuliao.widget.FollowView
+            android:id="@+id/iv_follow"
+            style="@style/follow_btn"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_follow_already" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_normal">
+
+        <com.keyboard.view.RoundAngleImageView
+            style="@style/discovery_item"
+            android:id="@+id/item0"
+            android:layout_marginRight="@dimen/margin_small"
+            android:scaleType="centerCrop"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp" />
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/item1"
+            style="@style/discovery_item"
+            android:layout_marginRight="@dimen/margin_small"
+            android:scaleType="centerCrop"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp" />
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/item2"
+            style="@style/discovery_item"
+            android:scaleType="centerCrop"
+            android:layout_marginRight="@dimen/margin_small"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp" />
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/item3"
+            style="@style/discovery_item"
+            android:scaleType="centerCrop"
+            app:roundHeight="5dp"
+            app:roundWidth="5dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="@string/login_btn" />
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:paddingLeft="39dp"
+        android:paddingRight="39dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_phone_num"
+                style="@style/login_hint"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/login_username_hint"
+                android:paddingLeft="@dimen/margin_big"
+                android:phoneNumber="true"
+                android:singleLine="true"
+                android:textColor="@color/common_title_grey"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:id="@+id/clear_username"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:padding="@dimen/margin_normal"
+                android:src="@drawable/clear_small"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <include layout="@layout/split_line_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/login_hint"
+                android:layout_width="0dp"
+                android:layout_height="55dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:digits="@string/regist_password_digits"
+                android:ems="10"
+                android:hint="@string/tip_please_input_password"
+                android:inputType="textPassword"
+                android:maxLength="@integer/password_max_len"
+                android:paddingLeft="@dimen/margin_big"
+                android:singleLine="true"
+                android:textColor="@color/common_title_grey"
+                android:textCursorDrawable="@null" />
+
+            <ImageView
+                android:id="@+id/clear_password"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:onClick="onClick"
+                android:padding="@dimen/margin_normal"
+                android:src="@drawable/clear_small"
+                android:visibility="invisible" />
+        </LinearLayout>
+
+        <include layout="@layout/split_line_horizontal" />
+
+        <LinearLayout
+            android:id="@+id/register_captcha_form"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_big"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/et_code"
+                style="@style/login_hint"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_toLeftOf="@+id/get_code_sms"
+                android:layout_weight="3"
+                android:background="@null"
+                android:hint="@string/regist_phone_captcha_hint"
+                android:maxLength="@integer/captcha_len"
+                android:numeric="integer"
+                android:singleLine="true"
+                android:textColor="@color/common_title_grey" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="23dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_big"
+                android:layout_toLeftOf="@id/get_code_sms"
+                android:background="@color/title_down_line" />
+
+            <TextView
+                android:id="@+id/get_code_sms"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1.2"
+                android:background="@color/white"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/regist_get_code"
+                android:textColor="@color/comment_text"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <include layout="@layout/split_line_horizontal" />
+
+
+        <RelativeLayout
+            android:id="@+id/forget_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/register_captcha_form"
+            android:layout_marginTop="@dimen/space_5"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tv_retrive_password"
+                style="@style/common_text_small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:paddingBottom="@dimen/margin_normal"
+                android:paddingRight="@dimen/margin_normal"
+                android:paddingTop="@dimen/margin_small"
+                android:text="@string/retrieve_password_tip" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="65dp"
+            android:background="@drawable/but_login_gray"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="onClick"
+            android:text="@string/login_btn"
+            android:textColor="@color/white"
+            android:textSize="@dimen/common_title_size" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="76dp"
+                android:layout_height="1px"
+                android:layout_centerVertical="true"
+                android:background="@color/title_down_line" />
+
+            <TextView
+                android:id="@+id/third_party"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:padding="2dp"
+                android:text="@string/login_third_party"
+                android:textColor="@color/release_time"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="76dp"
+                android:layout_height="1px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/title_down_line" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/text_wx"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/margin_big"
+                android:drawableTop="@drawable/wechat_login"
+                android:gravity="center"
+                android:paddingTop="23dp"
+                android:text="@string/platform_weichat"
+                android:textColor="@color/comment_content"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/text_qq"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:drawablePadding="@dimen/margin_big"
+                android:drawableTop="@drawable/qq_login"
+                android:gravity="center"
+                android:paddingTop="23dp"
+                android:text="@string/platform_qq"
+                android:textColor="@color/comment_content"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/text_wb"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:drawablePadding="@dimen/margin_big"
+                android:drawableTop="@drawable/microblog_login"
+                android:gravity="center"
+                android:paddingTop="23dp"
+                android:text="@string/platform_sina"
+                android:textColor="@color/comment_content"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/phone_regitry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/margin_bigger"
+            android:layout_marginTop="@dimen/margin_smaller"
+            android:gravity="center"
+            android:paddingTop="@dimen/margin_normal"
+            android:text="手机注册"
+            android:textColor="@color/comment_content"
+            android:textSize="15sp" />
+    </LinearLayout>
+</LinearLayout>

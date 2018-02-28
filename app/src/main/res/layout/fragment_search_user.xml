@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_white"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_hot_search"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:background="@color/main_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_normal"
+        android:text="@string/hot_user"
+        android:textColor="#b7b7b7"
+        android:textSize="11sp" />
+
+    <View
+        android:id="@+id/title_down_area"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@color/history_bg"
+        android:visibility="gone" />
+    <!-- google 官方下拉刷新 -->
+    <include layout="@layout/fragment_pull_refresh_listview" />
+</LinearLayout>

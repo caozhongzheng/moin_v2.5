@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/emoji_title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_comment_bg"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/emoji_title_flag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/btn_opt_text_to_tools_selector"
+        android:button="@null"
+        android:checked="false"
+        android:contentDescription="@null"
+        android:focusable="false"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:padding="@dimen/margin_normal">
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/emoji_titile_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:hint="@string/comment_hint"
+            android:maxLength="@integer/comment_max_len"
+            android:minHeight="35dp"
+            android:paddingLeft="@dimen/margin_normal"
+            android:textColor="?android:editTextColor"
+            android:textSize="17sp" />
+
+        <CheckBox
+            android:id="@+id/emoji_title_menu"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/selector_keyboard"
+            android:button="@null"
+            android:checked="false"
+            android:contentDescription="表情输入法切换"
+            android:focusable="false"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/emoji_title_send"
+        android:layout_width="58dp"
+        android:layout_height="36dp"
+        android:text="发送"
+        android:background="@drawable/tag_btn_solid_grey_bg"
+        android:layout_marginRight="@dimen/margin_big" />
+
+</LinearLayout>

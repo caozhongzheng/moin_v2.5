@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_normal">
+
+    <RelativeLayout
+        android:id="@+id/title_out_frame"
+        android:layout_width="match_parent"
+        android:layout_height="27dp">
+
+        <EditText
+            android:id="@+id/search_et"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="7dp"
+            android:layout_toLeftOf="@+id/cancel"
+            android:background="@drawable/bg_edittext"
+            android:drawableLeft="@drawable/store_search"
+            android:drawablePadding="@dimen/margin_normal"
+            android:hint="@string/search_sticker_hint"
+            android:imeOptions="actionSearch"
+            android:paddingBottom="4dp"
+            android:paddingLeft="@dimen/margin_normal"
+            android:paddingRight="30dp"
+            android:paddingTop="@dimen/margin_small"
+            android:singleLine="true"
+            android:textColor="@color/common_text_light"
+            android:textSize="@dimen/common_content_size" />
+
+        <ImageView
+            android:id="@+id/clear_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/search_et"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_normal"
+            android:paddingBottom="@dimen/margin_smaller"
+            android:paddingTop="@dimen/margin_smaller"
+            android:src="@drawable/btn_cancle"
+            android:text="@android:string/cancel"
+            android:textSize="@dimen/text_14"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/cancel"
+            style="@style/common_text_title"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:text="@string/cancle"
+            android:textSize="@dimen/common_title_size" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_hot_search"
+        style="@style/common_text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/cosplay_type_cell_space"
+        android:text="@string/hot_search" />
+
+    <LinearLayout
+        android:id="@+id/ll_hot_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_28px"
+        android:orientation="horizontal">
+
+        <com.moinapp.wuliao.ui.FlowLayout
+            android:id="@+id/fl_hot_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="start|top">
+
+            <TextView
+                style="@style/text_search"
+                android:gravity="center" />
+
+        </com.moinapp.wuliao.ui.FlowLayout>
+    </LinearLayout>
+    <!--<com.moinapp.wuliao.ui.empty.EmptyLayout-->
+    <!--android:id="@+id/error_layout"-->
+    <!--style="@style/fill_fill"-->
+    <!--android:visibility="gone" />-->
+
+</LinearLayout>

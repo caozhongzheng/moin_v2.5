@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/sticker_newest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:background="@drawable/new_red"/>
+
+    <TextView
+        android:layout_marginTop="16dp"
+        android:id="@+id/sticker_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingBottom="@dimen/margin_normal"
+        android:textColor="@color/comment_text"
+        android:textSize="@dimen/common_title_size" />
+    </FrameLayout>
+    <TextView
+        android:id="@+id/sticker_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_normal"
+        android:textColor="@color/common_text_light"
+        android:textSize="@dimen/txt_size_26px" />
+
+    <com.moinapp.wuliao.ui.NoScrollGridView
+        android:id="@+id/stickers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_normal"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:background="@color/white"
+        android:horizontalSpacing="@dimen/margin_bigger"
+        android:numColumns="4"
+        android:paddingBottom="22dp"
+        android:verticalSpacing="@dimen/margin_big"/>
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <include layout="@layout/layout_title_down_grey_area" />
+
+</LinearLayout>

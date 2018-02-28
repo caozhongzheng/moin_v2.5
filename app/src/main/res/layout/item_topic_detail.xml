@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ly_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/margin_normal">
+
+        <com.moinapp.wuliao.widget.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_bigger" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="13dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/comment_content"
+                android:textSize="@dimen/common_title_size" />
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/comment_author"
+                android:textSize="@dimen/comment_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_normal">
+
+            <TextView
+                android:layout_marginTop="3dp"
+                android:id="@+id/category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/label_pink"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/comment_time_size" />
+
+            <TextView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:lineSpacingExtra="2dp"
+                android:textColor="@color/comment_text"
+                android:textSize="@dimen/txt_size_30px" />
+        </FrameLayout>
+
+        <com.moinapp.wuliao.widget.AudioPlayLayout
+            android:id="@+id/audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_normal"
+            android:layout_marginTop="@dimen/margin_normal"
+            android:clickable="true"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/layout_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_normal"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.keyboard.view.RoundAngleImageView
+                    android:id="@+id/image0"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_weight="1"
+                    android:scaleType="centerCrop"
+                    android:visibility="invisible"
+                    app:roundHeight="4dp"
+                    app:roundWidth="4dp" />
+
+                <com.keyboard.view.RoundAngleImageView
+                    android:id="@+id/image1"
+                    android:layout_width="0dp"
+                    android:layout_height="110dp"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:scaleType="centerCrop"
+                    android:layout_toRightOf="@id/image0"
+                    android:layout_weight="1"
+                    android:src="@drawable/default_img"
+                    android:visibility="invisible"
+                    app:roundHeight="4dp"
+                    app:roundWidth="4dp" />
+
+                <com.keyboard.view.RoundAngleImageView
+                    android:id="@+id/image2"
+                    android:layout_width="0dp"
+                    android:scaleType="centerCrop"
+                    android:layout_height="110dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:layout_toRightOf="@id/image1"
+                    android:layout_weight="1"
+                    android:src="@drawable/default_img"
+                    android:visibility="invisible"
+                    app:roundHeight="4dp"
+                    app:roundWidth="4dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/image_num"
+                android:layout_width="34dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_topic_detail_picnum_bg"
+                android:drawableLeft="@drawable/picture_white_small"
+                android:drawablePadding="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_smaller"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="@dimen/comment_time_size"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="39dp"
+        android:clickable="false">
+
+        <TextView
+            android:id="@+id/look_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/icon_browse_btn"
+            android:drawablePadding="@dimen/margin_normal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_normal"
+            android:paddingRight="@dimen/margin_normal"
+            android:text=""
+            android:textColor="@color/comment_content"
+            android:textSize="@dimen/comment_time_size" />
+
+
+        <TextView
+            android:id="@+id/comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_toRightOf="@id/look_num"
+            android:drawableLeft="@drawable/icon_comment_btn"
+            android:drawablePadding="@dimen/margin_normal"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/margin_normal"
+            android:paddingRight="@dimen/margin_normal"
+            android:text=""
+            android:textColor="@color/comment_content"
+            android:textSize="@dimen/comment_time_size" />
+
+        <com.moinapp.wuliao.widget.LikeLayout
+            android:id="@+id/like_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            app:likeTxtColor="@color/comment_content"
+            app:likeTxtSize="@dimen/comment_time_size"></com.moinapp.wuliao.widget.LikeLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <include layout="@layout/layout_title_down_grey_area" />
+
+</LinearLayout>

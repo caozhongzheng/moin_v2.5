@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/whole_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:background="@color/main_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/ly_header"
+        layout="@layout/album_header" />
+
+    <RelativeLayout
+        android:id="@+id/full_album"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/full_album_header"
+            android:layout_width="match_parent"
+            android:layout_height="42.67dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/main_bg"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/adjust_image_down"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:src="@drawable/down_picture"
+                android:clickable="true"
+                />
+        </RelativeLayout>
+        <GridView
+            android:id="@+id/full_gridView"
+            android:layout_below="@+id/full_album_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cacheColorHint="@android:color/transparent"
+            android:clipChildren="true"
+            android:gravity="center"
+            android:listSelector="@color/moin"
+            android:numColumns="4"
+            android:stretchMode="columnWidth"
+            />
+
+        <RelativeLayout
+            android:id="@+id/full_bottom_ly"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:clickable="true">
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/draw_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.imagezoom.ImageViewTouch
+            android:id="@+id/crop_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/album_adjust"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/album_adjust_header"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/color_choose_photo"
+            android:clickable="true">
+
+            <ImageView
+                android:padding="5dp"
+                android:id="@+id/adjust_image_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/upward_picture"
+                android:clickable="true"
+            />
+        </RelativeLayout>
+        <GridView
+            android:id="@+id/id_gridView"
+            android:layout_below="@+id/album_adjust_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:cacheColorHint="@android:color/transparent"
+            android:clipChildren="true"
+            android:gravity="center"
+            android:listSelector="@color/moin"
+            android:numColumns="4"
+            android:stretchMode="columnWidth" />
+
+        <RelativeLayout
+            android:id="@+id/id_bottom_ly"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/transparent"
+            android:clickable="true">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <!--</com.moinapp.wuliao.ui.Panel>-->
+</LinearLayout>

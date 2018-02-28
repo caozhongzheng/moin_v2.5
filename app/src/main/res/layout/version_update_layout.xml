@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79717171">
+
+        <RelativeLayout
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corners_bg_white_2r_borderd"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/nq_update_dialog_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="新版本更新"
+                android:padding="@dimen/margin_normal"
+                style="@style/common_text_tab"
+                android:textColor="@color/common_title_grey"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/updatedialog_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="update"
+                style="@style/common_text_title"
+                android:padding="@dimen/margin_normal"
+                android:layout_below="@+id/nq_update_dialog_title"
+                android:minHeight="80dp" />
+
+            <View
+                android:paddingTop="12dp"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="@color/main_bg"
+                android:layout_below="@+id/updatedialog_content"
+                android:id="@+id/divider_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/divider_line">
+
+                <TextView
+                    android:id="@+id/no_update"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/update_no"
+                    android:textColor="@color/moin"
+                    />
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/main_bg" />
+
+                <TextView
+                    android:id="@+id/ok_update"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0"
+                    android:gravity="center"
+                    android:text="@string/update_yes"
+                    android:textColor="@color/moin"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+
+</FrameLayout>

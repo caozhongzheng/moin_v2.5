@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <com.moinapp.wuliao.ui.CommonTitleBar
+        android:id="@+id/title_layout"
+        style="@style/head_default"
+        app:leftBtnIcon="@drawable/return_key_black"
+        app:titleTxt="@string/stick_detail" />
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <include layout="@layout/layout_title_down_grey_area" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/common_white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_big"
+        android:paddingRight="@dimen/margin_big"
+        android:paddingTop="@dimen/space_21"
+        android:paddingBottom="@dimen/space_24"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/sticker_name"
+            android:textColor="@color/comment_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_17"/>
+
+        <TextView
+            android:id="@+id/sticker_desc"
+            android:paddingTop="@dimen/space_15"
+            android:textColor="@color/comment_content"
+            android:textSize="@dimen/text_size_15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/sticker_grid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:horizontalSpacing="@dimen/margin_bigger"
+        android:numColumns="4"
+        android:paddingBottom="22dp"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingRight="@dimen/margin_normal"
+        android:verticalSpacing="@dimen/margin_big" />
+    <!--<GridView-->
+        <!--android:paddingLeft="@dimen/margin_normal"-->
+        <!--android:paddingRight="@dimen/margin_normal"-->
+        <!--android:id="@+id/sticker_grid"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="@color/common_white"-->
+        <!--android:cacheColorHint="@color/transparent"-->
+        <!--android:gravity="top"-->
+        <!--android:listSelector="@color/transparent"-->
+        <!--android:numColumns="4"-->
+        <!--android:scrollbars="none"-->
+        <!--android:stretchMode="columnWidth" />-->
+
+</LinearLayout>

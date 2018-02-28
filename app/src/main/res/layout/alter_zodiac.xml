@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_title_grey"
+    android:clipToPadding="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/margin_big"
+        android:paddingRight="@dimen/margin_big">
+
+        <TextView
+            android:id="@+id/alter_zodiac_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/return_key_black"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:paddingLeft="@dimen/margin_normal"
+            android:scaleType="centerInside" />
+
+        <TextView
+            android:id="@+id/title_center"
+            style="@style/common_text_tab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/i_zodiac" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <com.moinapp.wuliao.ui.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_grey"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_title_down_grey_area" />
+
+            <com.moinapp.wuliao.ui.GridViewInScrollView
+                android:id="@+id/zodiac_lv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/common_white"
+                android:numColumns="3"
+                android:paddingBottom="@dimen/margin_bigger" />
+        </LinearLayout>
+    </com.moinapp.wuliao.ui.BounceScrollView>
+</LinearLayout>

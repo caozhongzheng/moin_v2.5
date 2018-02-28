@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_success" />
+
+        <TextView
+            android:id="@+id/enter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/margin_big"
+            android:layout_marginTop="@dimen/margin_big"
+            android:text="进入"
+            android:textColor="@color/comment_text"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="167dp"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_big"
+                android:layout_marginTop="44dp"
+                android:gravity="center_horizontal"
+                android:text="小丽"
+                android:textColor="@color/comment_text"
+                android:textSize="@dimen/common_title_size" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/login_success" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="50dp">
+
+                <ImageView
+                    android:layout_marginTop="2dp"
+                    android:id="@+id/iv_top_quote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_big"
+                    android:background="@drawable/top_quote_black" />
+
+                <TextView
+                    android:id="@+id/text_begin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    android:layout_toRightOf="@id/iv_top_quote"
+                    android:text="@string/regist_success_title"
+                    android:textColor="@color/comment_content"
+                    android:textSize="@dimen/comment_text_size" />
+
+                <TextView
+                    android:id="@+id/text_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/text_begin"
+                    android:layout_below="@id/text_begin"
+                    android:paddingBottom="@dimen/margin_normal"
+                    android:paddingRight="14dp"
+                    android:paddingTop="@dimen/margin_big"
+                    android:text="@string/regist_success_text"
+                    android:textColor="@color/comment_content"
+                    android:textSize="@dimen/comment_text_size" />
+
+                <ImageView
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/end_quote"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/text_content"
+                    android:layout_marginRight="@dimen/margin_big"
+                    android:background="@drawable/next_quote_black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text_content"
+                    android:layout_marginRight="@dimen/margin_normal"
+                    android:layout_toLeftOf="@id/end_quote"
+                    android:text="@string/regist_success_moin_name"
+                    android:textColor="@color/comment_content"
+                    android:textSize="@dimen/comment_text_size" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/main_bg"
+                android:paddingLeft="@dimen/margin_normal"
+                android:gravity="center_vertical"
+                android:text="@string/regist_success_suggest_header"
+                android:textColor="@color/release_time"
+                android:textSize="@dimen/comment_time_size" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_ava_gen"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="130dp">
+
+            <com.moinapp.wuliao.widget.AvatarView
+                android:id="@+id/iv_avatar"
+                android:layout_width="74dp"
+                android:layout_height="74dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:src="@drawable/default_avatar_black" />
+
+            <ImageView
+                android:id="@+id/iv_sex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tv_name"
+                android:layout_gravity="bottom|right"
+                android:layout_marginLeft="@dimen/space_5"
+                android:layout_marginRight="@dimen/margin_normal"
+                android:layout_marginTop="@dimen/space_2"
+                android:layout_toRightOf="@+id/tv_name"
+                android:src="@drawable/female_red" />
+        </FrameLayout>
+    </FrameLayout>
+
+</LinearLayout>

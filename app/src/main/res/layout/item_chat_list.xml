@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="57dp"
+    android:orientation="horizontal">
+
+    <com.moinapp.wuliao.modules.mine.chat.ChatListItemLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/layout_chat_item_content" />
+
+        <include layout="@layout/layout_chat_item_delete" />
+    </com.moinapp.wuliao.modules.mine.chat.ChatListItemLayout>
+
+
+</LinearLayout>

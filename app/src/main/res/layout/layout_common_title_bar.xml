@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.moinapp.wuliao.ui.CommonTitleBar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/title_bar"
+    style="@style/head_default"
+    app:leftBtnIcon="@drawable/return_key_black" />

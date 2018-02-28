@@ -1,0 +1,2 @@
+include ':app', ':Gpu-Image', ':ImageViewTouch', ':XhsEmoticonsKeyboard'
+include ':social_sdk_library_project'

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/common_white">
+
+
+    <LinearLayout
+        android:id="@+id/emoji_ly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/alter_avatar_emoji"
+            style="@style/information_sex_popwindow_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/s_emoji" />
+
+        <View style="@style/divide_line" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/alter_avatar_camera"
+        style="@style/information_sex_popwindow_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/moin"
+        android:text="@string/camera" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/alter_avatar_album"
+        style="@style/information_sex_popwindow_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/s_album" />
+
+    <View style="@style/divide_line" />
+
+    <TextView
+        android:id="@+id/alter_avatar_cancel"
+        style="@style/information_sex_popwindow_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@android:string/cancel" />
+
+
+</LinearLayout>

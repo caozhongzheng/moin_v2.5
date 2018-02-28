@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="74dp"
+    android:layout_height="74dp"
+    android:background="@drawable/shape_sticker_item_bg">
+
+    <com.keyboard.view.RoundAngleImageView
+        android:id="@+id/iv_sticker_image"
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:scaleType="centerCrop"
+        app:roundHeight="3dp"
+        app:roundWidth="3dp" />
+
+    <TextView
+        android:id="@+id/tv_use_num"
+        android:layout_width="wrap_content"
+        android:layout_height="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/use_frame_gray"
+        android:gravity="center"
+        android:paddingLeft="@dimen/margin_smaller"
+        android:paddingRight="@dimen/margin_smaller"
+        android:text="已使用 "
+        android:textColor="@color/white"
+        android:textSize="@dimen/comment_time_size" />
+
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_download"
+        android:src="@drawable/download_black"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginBottom="@dimen/margin_normal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

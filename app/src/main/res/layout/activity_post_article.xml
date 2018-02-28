@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#88ffffff"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="100dp"
+        android:orientation="horizontal"
+        android:paddingLeft="67dp"
+        android:paddingRight="67dp">
+
+        <TextView
+            android:id="@+id/post_article"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawablePadding="@dimen/margin_normal"
+            android:drawableTop="@drawable/post_message_b"
+            android:gravity="center_horizontal"
+            android:text="发帖"
+            android:textColor="@color/comment_content"
+            android:textSize="@dimen/common_title_size" />
+
+        <TextView
+            android:id="@+id/post_picture"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="68dp"
+            android:drawablePadding="@dimen/margin_normal"
+            android:drawableTop="@drawable/send_picture_b"
+            android:gravity="center_horizontal"
+            android:text="发图"
+            android:textColor="@color/comment_content"
+            android:textSize="@dimen/common_title_size" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="20dp"
+        android:padding="@dimen/margin_normal"
+        android:src="@drawable/add_big_gray_closs" />
+</FrameLayout>

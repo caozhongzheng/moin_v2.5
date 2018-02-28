@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/fill_fill"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/all_title_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/left_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2">
+
+            <ImageView
+                android:id="@+id/iv_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/return_key_black" />
+
+        </RelativeLayout>
+
+        <!-- 导航标题栏 -->
+        <com.moinapp.wuliao.widget.PagerSlidingTabStrip
+            android:id="@+id/pager_tabstrip"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:allowWidthFull="true"
+            app:slidingBlock="?attr/sliding_block_bg" />
+
+
+        <RelativeLayout
+            android:id="@+id/search_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:visibility="invisible">
+
+            <ImageView
+                android:id="@+id/iv_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/actionbar_search_icon" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <include layout="@layout/split_line_horizontal" />
+
+    <TextView
+        android:id="@+id/new_message_tip"
+        android:layout_width="match_parent"
+        android:layout_height="29dp"
+        android:layout_below="@+id/title_layout"
+        android:background="@drawable/new_message_tip"
+        android:gravity="center"
+        android:text="1条新消息"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_16"
+        android:visibility="gone"></TextView>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        style="@style/fill_fill"
+        android:layout_below="@id/new_message_tip" />
+
+    <com.moinapp.wuliao.ui.empty.EmptyLayout
+        android:id="@+id/error_layout"
+        style="@style/fill_fill"
+        android:visibility="gone" />
+
+</LinearLayout>

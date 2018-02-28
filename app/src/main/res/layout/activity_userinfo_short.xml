@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_title_grey"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="false">
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:onClick="onClick"
+                android:src="@drawable/return_key_black"
+                android:layout_marginLeft="@dimen/margin_normal" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/title_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/information_short_title"
+            style="@style/common_text_tab" />
+    </RelativeLayout>
+
+    <com.moinapp.wuliao.ui.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:background="@color/common_grey">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/avatar_item"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                style="@style/common_list_item"
+                android:layout_marginTop="@dimen/margin_big">
+
+                <TextView
+                    android:id="@+id/avatar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/i_avatar"
+                    style="@style/common_text_title_light" />
+
+                <TextView
+                    android:id="@+id/avatar_title_hint"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/i_must"
+                    style="@style/common_text_title_light_hint"
+                    android:layout_toRightOf="@id/avatar_title"
+                    android:layout_alignBottom="@id/avatar_title"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/avatar_arrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="@dimen/arrow_padding"
+                    android:src="@drawable/next_gray" />
+
+                <FrameLayout
+                    android:id="@+id/user_avatar_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/avatar_arrow"
+                    android:layout_margin="@dimen/margin_normal">
+
+                    <com.moinapp.wuliao.widget.CircleImageView
+                        android:id="@+id/user_avatar"
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:src="@drawable/icon_avatar" />
+                </FrameLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/username_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_big">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/icon_user"
+                    android:id="@+id/userIcon" />
+
+                <EditText
+                    android:id="@+id/et_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:maxLength="@integer/username_max_len"
+                    android:hint="@string/regist_username_hint"
+                    android:singleLine="true"
+
+                    android:layout_toRightOf="@+id/userIcon"
+                    android:layout_marginLeft="@dimen/margin_normal"
+                    style="@style/common_text_title" />
+            </RelativeLayout>
+
+            <View
+                style="@style/divide_line" />
+
+
+            <RelativeLayout
+                android:id="@+id/gender_item"
+                style="@style/common_list_item"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/title_height"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioGroup
+                        android:id="@+id/gender_group"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <RadioButton
+                            android:id="@+id/gender_male"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            android:button="@null"
+                            android:background="@drawable/radio_boy" />
+                        <RadioButton
+                            android:id="@+id/gender_female"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20dp"
+                            android:button="@null"
+                            android:background="@drawable/radio_girl" />
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+            <View
+                style="@style/divide_line"
+                android:layout_marginBottom="@dimen/margin_big" />
+
+
+            <TextView
+                android:id="@+id/btn_register"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="39dp"
+                android:layout_marginRight="39dp"
+                android:background="@drawable/but_login_gray"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:text="@string/create_account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/common_title_size" />
+
+        </LinearLayout>
+    </com.moinapp.wuliao.ui.BounceScrollView>
+
+</LinearLayout>

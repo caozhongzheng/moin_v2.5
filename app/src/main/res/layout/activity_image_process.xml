@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <!--标题栏-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/all_title_height"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/title_left_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingLeft="@dimen/space_16"
+            android:paddingRight="@dimen/space_25"
+            android:src="@drawable/return_key_black" />
+
+        <LinearLayout
+            android:id="@+id/title_op_btns"
+            android:layout_width="253dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_reverse_horizontal"
+                style="@style/edit_cosplay_opt_btn"
+                android:src="@drawable/fliplr_edit" />
+
+            <ImageView
+                android:id="@+id/iv_reverse_vertical"
+                style="@style/edit_cosplay_opt_btn"
+                android:src="@drawable/flipud_edit" />
+
+            <ImageView
+                android:id="@+id/iv_upper"
+                style="@style/edit_cosplay_opt_btn"
+                android:src="@drawable/top_edit" />
+
+            <ImageView
+                android:id="@+id/iv_downer"
+                style="@style/edit_cosplay_opt_btn"
+                android:src="@drawable/bottom_edit" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="@dimen/space_20"
+            android:paddingRight="@dimen/space_16"
+            android:text="继续"
+            android:textColor="@color/black"
+            android:textSize="@dimen/txt_size_32px" />
+
+    </RelativeLayout>
+
+    <!--贴纸编辑区-->
+    <FrameLayout
+        android:id="@+id/drawing_view_container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tv_color_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="50sp" />
+
+        <ImageView
+            android:id="@+id/gpuimage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <com.moinapp.wuliao.modules.stickercamera.app.ui.StickerView
+            android:id="@+id/stickview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <!--工具区-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/list_item_background_pressed"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/page_area"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+
+            <!--贴纸布局-->
+            <LinearLayout
+                android:id="@+id/ly_sticker"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btm_horizontal_line"
+                android:orientation="vertical"
+                android:paddingBottom="4dp"
+                android:visibility="gone">
+
+                <!--贴纸一级界面-->
+                <LinearLayout
+                    android:id="@+id/ly_sticker_package"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bar_height"
+                        android:layout_alignParentTop="true"
+                        android:gravity="center_vertical"
+                        android:paddingTop="4dp">
+
+                        <com.keyboard.view.EmoticonsIndicatorView
+                            android:id="@+id/xview_eiv_package"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/cosplay_innertitle_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+                    </RelativeLayout>
+
+
+                    <com.keyboard.view.EmotPackagesPageView
+                        android:id="@+id/xview_epv_package"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/space_10"
+                        android:paddingRight="@dimen/space_10" />
+
+                </LinearLayout>
+
+                <!--贴纸二级界面-->
+                <LinearLayout
+                    android:id="@+id/ly_sticker_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/bar_height"
+                        android:layout_alignParentTop="true">
+
+                        <TextView
+                            android:id="@+id/sticker_name"
+                            style="@style/common_text_small_dark"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="4dp"
+                            android:layout_centerInParent="true" />
+
+                        <ImageView
+                            android:id="@+id/sticker_back"
+                            style="@style/common_text_content"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:scaleType="center"
+                            android:paddingLeft="@dimen/cosplay_innertitle_margin"
+                            android:paddingRight="30dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/up_arrow_black" />
+
+                        <com.keyboard.view.EmoticonsIndicatorView
+                            android:id="@+id/xview_eiv_sticker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/cosplay_innertitle_margin"
+                            android:gravity="center"
+                            android:orientation="horizontal" />
+                    </RelativeLayout>
+
+
+                    <com.keyboard.view.EmoticonsPageView
+                        android:id="@+id/xview_epv_sticker"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/space_10"
+                        android:paddingRight="@dimen/space_10" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--声音布局-->
+            <it.sephiroth.android.library.widget.HListView
+                android:id="@+id/list_voices"
+                style="@style/acitivity_cosplay_edit_hls"
+                android:layout_above="@+id/btm_horizontal_line"
+                android:paddingLeft="@dimen/space_15"
+                app:hlv_dividerWidth="@dimen/space_15" />
+
+            <!--彩色文字布局-->
+            <LinearLayout
+                android:id="@+id/ly_color_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btm_horizontal_line"
+                android:orientation="vertical"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/acitivity_cosplay_edit_tv_title_ct"
+                    android:text="@string/color_text_style" />
+
+                <it.sephiroth.android.library.widget.HListView
+                    android:id="@+id/list_color_text_styles"
+                    style="@style/acitivity_cosplay_edit_hls_ct"
+                    android:layout_weight="5"
+                    app:hlv_dividerWidth="@dimen/margin_15px" />
+
+                <TextView
+                    android:id="@+id/tv_color_text_title_c"
+                    style="@style/acitivity_cosplay_edit_tv_title_ct"
+                    android:text="@string/color_text_color" />
+
+                <it.sephiroth.android.library.widget.HListView
+                    android:id="@+id/list_color_text_colors"
+                    style="@style/acitivity_cosplay_edit_hls_ct"
+                    android:layout_weight="3"
+                    app:hlv_dividerWidth="@dimen/margin_15px" />
+
+            </LinearLayout>
+
+            <!--最近贴纸布局-->
+            <LinearLayout
+                android:id="@+id/ly_recent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/btm_horizontal_line"
+                android:orientation="vertical"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bar_height"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center_vertical"
+                    android:paddingTop="4dp">
+
+                    <TextView
+                        android:id="@+id/tv_rencent_count"
+                        style="@style/common_text_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="@dimen/cosplay_innertitle_margin" />
+
+                    <com.keyboard.view.EmoticonsIndicatorView
+                        android:id="@+id/xview_recent_eiv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="@dimen/cosplay_innertitle_margin"
+                        android:gravity="center"
+                        android:orientation="horizontal"/>
+                </RelativeLayout>
+
+                <com.keyboard.view.EmoticonsPageView
+                    android:id="@+id/xview_recent_epv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/space_10"
+                    android:paddingRight="@dimen/space_10" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/btm_horizontal_line"
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:background="@color/title_down_line"/>
+        </RelativeLayout>
+
+        <!--3.2.6版本只保留声音,彩色字,贴纸和最近-->
+        <LinearLayout
+            android:id="@+id/ly_bottom_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bar_big_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/voice_btn"
+                style="@style/cosplay_process_toolbtn_parent">
+
+                <ImageView
+                    android:id="@+id/iv_voice"
+                    style="@style/cosplay_process_toolbtn"
+                    android:src="@drawable/dktoolbar_voice" />
+
+                <TextView
+                    android:id="@+id/tv_voice"
+                    style="@style/cosplay_process_toolbtn_tv"
+                    android:text="声音" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/colortext_btn"
+                style="@style/cosplay_process_toolbtn_parent">
+
+                <ImageView
+                    android:id="@+id/iv_colortext"
+                    style="@style/cosplay_process_toolbtn"
+                    android:src="@drawable/dktoolbar_color_text" />
+
+                <TextView
+                    android:id="@+id/tv_colortext"
+                    style="@style/cosplay_process_toolbtn_tv"
+                    android:text="彩色字" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/store_btn"
+                style="@style/cosplay_process_toolbtn_parent">
+
+                <ImageView
+                    android:id="@+id/iv_store"
+                    style="@style/cosplay_process_toolbtn"
+                    android:src="@drawable/dktoolbar_store" />
+
+                <TextView
+                    android:id="@+id/tv_store"
+                    style="@style/cosplay_process_toolbtn_tv"
+                    android:text="贴纸" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/recent_btn"
+                style="@style/cosplay_process_toolbtn_parent">
+
+                <ImageView
+                    android:id="@+id/iv_recent"
+                    style="@style/cosplay_process_toolbtn"
+                    android:src="@drawable/dktoolbar_recently" />
+
+                <TextView
+                    android:id="@+id/tv_recent"
+                    style="@style/cosplay_process_toolbtn_tv"
+                    android:text="最近" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

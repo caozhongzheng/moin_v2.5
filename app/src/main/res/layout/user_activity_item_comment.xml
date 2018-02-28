@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ly_item_comment"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/comment_txt"
+        style="@style/acitivity_cosplay_text"
+        android:text="我评论了亲爱的小萝卜:哈哈,图片弄的好友创意,我喜欢你发布的图片,以后要多多发布哟,加油!" />
+
+
+    <com.keyboard.view.RoundAngleImageView
+        android:id="@+id/comment_img"
+        style="@style/acitivity_cosplay_image_s"
+        app:roundHeight="5dp"
+        app:roundWidth="5dp" />
+</LinearLayout>

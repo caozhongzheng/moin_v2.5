@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_comment_bg"
+    android:orientation="vertical" >
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color" />
+
+    <include
+        android:id="@+id/emoji_title"
+        layout="@layout/emoji_title" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color" />
+
+    <include layout="@layout/emoji_content" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/divide_line_color" />
+
+    <include layout="@layout/emoji_bottom" />
+
+</LinearLayout>

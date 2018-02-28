@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="3dp">
+
+    <RelativeLayout
+        android:id="@+id/image_frame"
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:background="@color/common_sticker_grey">
+
+        <ImageView
+            android:id="@+id/id_item_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/default_img" />
+
+        <TextView
+            android:id="@+id/tv_sticker_use_num"
+            android:layout_width="45dp"
+            android:layout_height="18dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginRight="3dp"
+            android:textSize="8sp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/sticker_use_bg"/>
+    </RelativeLayout>
+
+
+    <!--<ImageButton-->
+        <!--android:id="@+id/id_item_select"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_marginRight="3dp"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:background="@null"-->
+        <!--android:clickable="false"-->
+        <!--android:src="@drawable/icon_select" />-->
+
+</RelativeLayout>

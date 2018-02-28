@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <!--2.7版本去除滤镜, 3.1版本添加回来-->
+    <LinearLayout
+        android:id="@+id/filter_btn"
+        style="@style/cosplay_process_toolbtn_parent">
+
+        <ImageView
+            android:id="@+id/iv_filter"
+            style="@style/cosplay_process_toolbtn"
+            android:src="@drawable/dktoolbar_filter" />
+
+        <TextView
+            android:id="@+id/tv_filter"
+            style="@style/cosplay_process_toolbtn_tv"
+            android:text="特效" />
+
+    </LinearLayout>
+
+    <!--3.2.4加上声音和彩色字-->
+    <LinearLayout
+        android:id="@+id/voice_btn"
+        style="@style/cosplay_process_toolbtn_parent">
+
+        <ImageView
+            android:id="@+id/iv_voice"
+            style="@style/cosplay_process_toolbtn"
+            android:src="@drawable/dktoolbar_voice" />
+
+        <TextView
+            android:id="@+id/tv_voice"
+            style="@style/cosplay_process_toolbtn_tv"
+            android:text="声音" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/colortext_btn"
+        style="@style/cosplay_process_toolbtn_parent">
+
+        <ImageView
+            android:id="@+id/iv_colortext"
+            style="@style/cosplay_process_toolbtn"
+            android:src="@drawable/dktoolbar_color_text" />
+
+        <TextView
+            android:id="@+id/tv_colortext"
+            style="@style/cosplay_process_toolbtn_tv"
+            android:text="彩色字" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/store_btn"
+        style="@style/cosplay_process_toolbtn_parent">
+
+        <ImageView
+            android:id="@+id/iv_store"
+            style="@style/cosplay_process_toolbtn"
+            android:src="@drawable/dktoolbar_store" />
+
+        <TextView
+            android:id="@+id/tv_store"
+            style="@style/cosplay_process_toolbtn_tv"
+            android:text="贴纸" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recent_btn"
+        style="@style/cosplay_process_toolbtn_parent">
+
+        <ImageView
+            android:id="@+id/iv_recent"
+            style="@style/cosplay_process_toolbtn"
+            android:src="@drawable/dktoolbar_recently" />
+
+        <TextView
+            android:id="@+id/tv_recent"
+            style="@style/cosplay_process_toolbtn_tv"
+            android:text="最近" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

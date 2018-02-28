@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingLeft="@dimen/space_2"
+    android:paddingRight="@dimen/space_2"
+    android:paddingTop="@dimen/space_4">
+
+    <RelativeLayout
+        android:id="@+id/left_item"
+        style="@style/myinfo_item">
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/left_image"
+            style="@style/fill_fill"
+            app:roundHeight="4dp"
+            app:roundWidth="4dp" />
+
+        <ImageView
+            android:id="@+id/left_img_type"
+            style="@style/activity_cosplay_tag_image"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/middle_item"
+        style="@style/myinfo_item">
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/middle_image"
+            style="@style/fill_fill"
+            app:roundHeight="4dp"
+            app:roundWidth="4dp" />
+
+        <ImageView
+            android:id="@+id/middle_img_type"
+            style="@style/activity_cosplay_tag_image"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/right_item"
+        style="@style/myinfo_item">
+
+        <com.keyboard.view.RoundAngleImageView
+            android:id="@+id/right_image"
+            style="@style/fill_fill"
+            app:roundHeight="4dp"
+            app:roundWidth="4dp" />
+
+        <ImageView
+            android:id="@+id/right_img_type"
+            style="@style/activity_cosplay_tag_image"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

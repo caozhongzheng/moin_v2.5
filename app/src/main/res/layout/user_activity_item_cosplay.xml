@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ly_item_cosplay"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/cos_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/cos_ly_browse"
+            style="@style/activity_cosplay_btn">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/small_follow_gray" />
+
+            <TextView
+                android:id="@+id/cos_browse_num"
+                style="@style/acitivity_cosplay_num"
+                android:text="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/cos_ly_like"
+            style="@style/activity_cosplay_btn">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_like_content" />
+
+            <TextView
+                android:id="@+id/cos_like_num"
+                style="@style/acitivity_cosplay_num"
+                android:text="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/cos_ly_comment"
+            style="@style/activity_cosplay_btn">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/icon_comment_content" />
+
+            <TextView
+                android:id="@+id/cos_comment_num"
+                style="@style/acitivity_cosplay_num"
+                android:text="3" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:id="@+id/cos_ly_forward"
+            style="@style/activity_cosplay_btn">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/change_black_small" />
+
+            <TextView
+                android:id="@+id/cos_forward_num"
+                style="@style/acitivity_cosplay_num"
+                android:text="4" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

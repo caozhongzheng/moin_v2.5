@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_info"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_normal"
+        android:paddingTop="@dimen/margin_normal">
+
+        <TextView
+            android:id="@+id/tag_name"
+            style="@style/common_text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:maxLength="@integer/tag_max_len"
+            android:singleLine="true"
+            android:text="标签名称" />
+
+        <!--<TextView-->
+        <!--android:id="@+id/pic_num"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@+id/tag_name"-->
+        <!--android:layout_marginTop="@dimen/margin_10px"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:maxLength="@integer/tag_max_len"-->
+        <!--android:singleLine="true"-->
+        <!--android:textColor="#494949"-->
+        <!--android:textSize="@dimen/margin_normal"-->
+        <!--android:visibility="gone" />-->
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_follow"
+        android:layout_width="60dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/like_pink_button"
+        android:gravity="center"
+        android:text="+ 订阅"
+        android:textColor="@color/moin"
+        android:textSize="@dimen/common_small_size" />
+
+    <TextView
+        android:id="@+id/pic_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/margin_normal"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:maxLength="@integer/tag_max_len"
+        android:singleLine="true"
+        android:textColor="#666666"
+        android:textSize="@dimen/margin_normal"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_below="@id/ll_info"
+        android:background="@color/hot_pic_num_divider" />
+
+</RelativeLayout>
